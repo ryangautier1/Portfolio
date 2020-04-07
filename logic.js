@@ -23,4 +23,26 @@ $(document).ready(function () {
         }
 
     });
+
+    $("#lunch-and-wag").hover(function() {
+        $("#lunch-and-wag").addClass("shadow");
+    }, function() {
+        $("#lunch-and-wag").removeClass("shadow");
+    });
+
+    $("#weather").hover(function() {
+        $("#weather").addClass("shadow");
+    }, function() {
+        $("#weather").removeClass("shadow");
+    });
+
+
+//     $().mousemove(function(event){
+//         if($(".card:hover").length != 0){
+//             console.log($(event.target));
+//            $(event.target).addClass("shadow");
+//        } else{
+//            $(".card").removeClass("shadow");
+//        }
+//    });
 })
