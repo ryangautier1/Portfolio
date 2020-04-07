@@ -60,6 +60,11 @@ body {
     text-decoration: none;
 }
 
+.nav-link:hover {
+    color: #fefefe;
+    text-decoration: none;
+}
+
 .sticky {
     position: fixed;
     top: 0;
@@ -73,7 +78,12 @@ body {
 .current-page {
     border-color: #b10101 #10255e transparent;
     background-color: #fdfdfa;
-    color: #5e5d5d;
+    color: #333;
+}
+
+.current-page:hover {
+    color: #333;
+    text-decoration: none;
 }
 
 /* about section */
@@ -105,6 +115,10 @@ article h2 {
     max-width: 400px;
 }
 
+.card:hover, .card-text {
+    text-decoration: none;
+    color: #333;
+}
 
 .project-img {
     width: 75%;
