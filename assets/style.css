@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #cover-screen h1 {
@@ -19,6 +20,21 @@ body {
     font-size: 42px;
     text-align: center;
     line-height: 150%;
+}
+
+#continue-btn{
+    margin-top: 50px;
+    font-size: 24px;
+    border: 2px solid #72E5F9;
+    padding: 5px 10px 7px;
+    color: #72E5F9;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+#continue-btn:hover{
+    border: 2px solid transparent;
+    color: #10255e;
+    background-color: #72E5F9;
 }
 
 #navbar {
@@ -36,7 +52,7 @@ body {
     border-radius: 10px 10px 0 0;
     text-align: center;
     margin: 0 20px;
-    padding-top: 7px;
+    padding: 7px 5px 0;
     color: #fefefe;
     text-decoration: none;
 }
@@ -64,9 +80,19 @@ body {
     flex-direction: column;  
 }
 
-.resume h3{
-    margin: 15px 0 50px 0;
+#resume-btn{
+    margin: 35px 0 50px 0;
     font-size: 24px;
+    border: 2px solid #163485;
+    padding: 5px 10px 7px;
+    color: #163485;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+#resume-btn:hover{
+    border: 2px solid transparent;
+    color: #fdfdfa;
+    background-color: #163485;
 }
 
 #ryan-picture {
