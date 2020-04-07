@@ -45,6 +45,7 @@ body {
     padding-top: 10px;
     display: flex;
     background-color: #10255e;
+    z-index: 1;
 }
 
 .nav-link {
@@ -91,6 +92,24 @@ body {
     color: #163485;
 }
 
+/* projects section */
+article h2 {
+    padding: 15px 20px;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid #5e5d5d;
+}
+
+.card {
+    max-width: 400px;
+}
+
+
+.project-img {
+    width: 75%;
+    margin: 0 auto;
+}
 
 /* resume section */
 .resume {
@@ -123,13 +142,7 @@ body {
 }
 
 
-/* ectra stuff below? */
-
-article h2 {
-    padding: 15px 20px;
-    font-size: 32px;
-    font-family: 'Open Sans', sans-serif;
-}
+/* extra stuff below? */
 
 #about-me {
     width: 100%;
