@@ -5,50 +5,154 @@ body {
     background-color: #fdfdfa;
 }
 
-header {
-    background-color: #eee;
-}
-
-header h1 {
-    padding: 15px 20px;
-    font-size: 48px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-nav {
-    border-bottom: solid 1px #aaa;
-    margin: 20px 0;
+#cover-screen {
+    height: 100vh;
+    background-image: linear-gradient(#163485, #10255e);
     display: flex;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover-screen h1 {
+    font-family: 'Inria Sans', sans-serif;
+    color: #fdfdfa;
+    font-size: 42px;
+    text-align: center;
+    line-height: 150%;
+}
+
+#navbar {
+    margin-bottom: 20px;
+    padding-top: 10px;
+    display: flex;
+    background-color: #10255e;
 }
 
 .nav-link {
-    position: relative;
     height: 25px;
     width: 75px;
     border: solid 1px transparent;
     border-top: solid 4px transparent;
     border-radius: 10px 10px 0 0;
     text-align: center;
-    margin: 0 15px;
+    margin: 0 20px;
     padding-top: 7px;
-    top: 1px;
-    color: #333;
+    color: #fefefe;
     text-decoration: none;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.extra-margin {
+    margin-bottom: 67px;
+}
+
 .current-page {
-    border-color: #415d43 #aaa transparent;
+    border-color: #b10101 #10255e transparent;
     background-color: #fdfdfa;
+    color: #333;
+}
+
+.resume {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;  
+}
+
+.resume h3{
+    margin: 15px 0 50px 0;
+    font-size: 24px;
+}
+
+#ryan-picture {
+    height: 265px;
+    width: 265px;
+    border-radius: 50%;
+    margin-top: 75px;
+}
+
+/* Styling for index */
+#aboutme-article {
+    display: flex;
+}
+
+article h2 {
+    padding: 15px 20px;
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#about-me {
+    width: 100%;
+}
+
+
+
+article p {
+    line-height: 150%;
+    margin: 0 20px;
+}
+
+.vertical-break {
+    height: 400px;
+    border-left: solid 1px #aaa;
+}
+
+#spotlight-section {
+    float: left;
+}
+
+#spotlight-section h3 {
+    padding: 15px 20px;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#spotlight-slides {
+
+}
+
+
+@media screen and (max-width: 768px) {
+    #about-me {
+        width: 50%;
+    }
+    #ryan-picture {
+        height: 250px; 
+    }
 }
 
 @media screen and (max-width: 576px) {
     header {
         width: 100%;
         text-align: center;
-        
     }
     nav {
         justify-content: space-around;
+    }
+    #aboutme-article {
+        flex-direction: column;
+    }
+    article h2 {
+        padding: 15px 20px;
+        font-size: 32px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    #about-me {
+        width: 100%;
+    }
+    
+    #ryan-picture {
+        height: 250px; 
+    }
+    
+    article p {
+        line-height: 150%;
+        margin: 0 20px;
     }
 }
