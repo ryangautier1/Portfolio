@@ -5,6 +5,7 @@ body {
     background-color: #fdfdfa;
 }
 
+/* cover page */
 #cover-screen {
     height: 100vh;
     background-image: linear-gradient(#163485, #10255e);
@@ -35,8 +36,10 @@ body {
     border: 2px solid transparent;
     color: #10255e;
     background-color: #72E5F9;
+    text-decoration: none;
 }
 
+/* navbar */
 #navbar {
     margin-bottom: 20px;
     padding-top: 10px;
@@ -45,14 +48,13 @@ body {
 }
 
 .nav-link {
-    height: 25px;
     width: 75px;
     border: solid 1px transparent;
     border-top: solid 4px transparent;
     border-radius: 10px 10px 0 0;
     text-align: center;
     margin: 0 20px;
-    padding: 7px 5px 0;
+    padding: 7px 5px 3px;
     color: #fefefe;
     text-decoration: none;
 }
@@ -70,9 +72,27 @@ body {
 .current-page {
     border-color: #b10101 #10255e transparent;
     background-color: #fdfdfa;
-    color: #333;
+    color: #5e5d5d;
 }
 
+/* about section */
+#about {
+    width: 80%;
+    margin: 0 auto;
+    padding: 125px 20px;
+    font-size: 20px;
+    line-height: 150%;
+    font-family: 'Roboto Mono', sans-serif;
+    text-align: center;
+}
+
+.skills {
+    font-size: 24px;
+    color: #163485;
+}
+
+
+/* resume section */
 .resume {
     display: flex;
     align-items: center;
@@ -81,7 +101,7 @@ body {
 }
 
 #resume-btn{
-    margin: 35px 0 50px 0;
+    margin: 35px 0 75px 0;
     font-size: 24px;
     border: 2px solid #163485;
     padding: 5px 10px 7px;
@@ -102,10 +122,8 @@ body {
     margin-top: 75px;
 }
 
-/* Styling for index */
-#aboutme-article {
-    display: flex;
-}
+
+/* ectra stuff below? */
 
 article h2 {
     padding: 15px 20px;

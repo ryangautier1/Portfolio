@@ -11,7 +11,7 @@ $(document).ready(function () {
             
             // change active tab on nav bar
             $("#home-link").removeClass("current-page");
-            $("#resume-link").addClass("current-page");
+            $("#about-link").addClass("current-page");
         }
         else {
             $("#navbar").removeClass("sticky");
@@ -19,7 +19,7 @@ $(document).ready(function () {
 
             // change active tab on nav bar
             $("#home-link").addClass("current-page");
-            $("#resume-link").removeClass("current-page");
+            $("#about-link").removeClass("current-page");
         }
 
     });

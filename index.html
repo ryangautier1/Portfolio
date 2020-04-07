@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="assets/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Inria+Sans&family=Roboto+Mono&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/reset.css" />
     <link rel="stylesheet" href="assets/style.css" />
 
     <title>Ryan Gautier</title>
@@ -16,16 +18,55 @@
 <body>
     <header>
         <div id="cover-screen">
-            <h1>Hello, my name is Ryan Gautier.<br>I am a Web Developer.</h1>
-            <h3 id="continue-btn">Continue ></h3>
+            <h1>Hello, my name is Ryan Gautier.<br>Welcome to my website.</h1>
+            <a id="continue-btn" href="#about">Continue ></a>
         </div>
+        <div id="btm-cover"></div>
         <nav id="navbar">
-            <a class="current-page nav-link" href="index.html" id="home-link">Home</a>
-            <a class="nav-link" href="#" id="resume-link">Resume</a>
+            <a class="current-page nav-link" href="#cover-screen" id="home-link">Home</a>
+            <a class="nav-link" href="#about" id="about-link">About</a>
             <a class="nav-link" href="#" id="projects-link">Projects</a>
+            <a class="nav-link" href="#" id="resume-link">Resume</a>
             <a class="nav-link" href="#" id="contact-link">Contact</a>
         </nav>
     </header>
+
+    <article id="about">
+        <p>I am a software engineer based in Austin, TX.
+            <br>
+            My passion is problem solving, which is why I love what I do.
+            <br><br>
+            My skillset includes
+            <br>
+            <span class="skills">HTML, CSS, Bootstrap, JavaScript, jQuery, and Node.js.</span>
+            <br><br>
+            I'd love for you to take a look at some of my projects below and see what I'm all about!
+        </p>
+    </article>
+
+    <article id="projects-article" class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <img src="assets/dog.png" class="card-img-top" alt="Lunch and Wag Logo">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <img src="https://github.com/ryangautier1/06-Weather-Dashboard/blob/master/Screenshot.PNG?raw=true" class="card-img-top" alt="Weather Dashboard Image">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </article>
 
     <article class="resume">
         <img src="assets/ryanpicturesquare.png" alt="Ryan Gautier" id="ryan-picture" />
@@ -55,14 +96,29 @@
                 the way it is intended to. I am set to graduate from my coding bootcamp on June 1st, 2020. I am excited
                 to
                 see what my future has in store for me in the field of web development!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta facere error inventore deserunt quibusdam amet deleniti voluptas? Earum libero temporibus asperiores cupiditate similique assumenda velit obcaecati! Ex voluptatem deserunt expedita.
-                Error eos iusto vel soluta nam amet, maiores quo nemo excepturi numquam tempore voluptatum facere quasi dolor debitis esse mollitia est enim, officiis dolores optio. Labore inventore aut accusamus non.
-                Eum explicabo dicta, recusandae cum nulla quaerat placeat esse, excepturi autem rem et veritatis quam aliquam quibusdam iste ex, ut minima architecto facilis voluptatem odit magnam voluptate inventore quae. Impedit!
-                Maiores placeat suscipit, incidunt tenetur ex excepturi rem unde? Accusantium quidem aliquam impedit necessitatibus numquam assumenda explicabo quo, vero nulla hic pariatur ullam fuga ipsa minima eveniet neque similique aut.
-                Adipisci corporis fugit nostrum sunt repellat fuga. Non fugiat est saepe nisi quo dicta hic illum, expedita placeat sequi explicabo asperiores molestiae vero corrupti tenetur incidunt minus vel laboriosam id.
-                Quisquam eveniet cum amet laboriosam dolorem harum minus, quos, dolorum necessitatibus nihil beatae sed eius atque quasi sequi molestiae voluptates pariatur facere. Provident veritatis iusto quidem nesciunt esse officia quia.
-                Cupiditate blanditiis voluptates similique sunt. Commodi adipisci culpa placeat voluptas cum fugit ab rem, reiciendis dolore quaerat atque officiis perspiciatis ullam praesentium sunt eaque. Maxime, suscipit iure. Fuga, nobis hic!
-                Sunt dicta nemo tempora totam adipisci deserunt rem officiis dolores dolorum optio aspernatur vero libero repudiandae pariatur assumenda laborum, impedit commodi beatae doloribus molestiae obcaecati asperiores sint. Beatae, magni aut!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta facere error inventore deserunt quibusdam
+                amet deleniti voluptas? Earum libero temporibus asperiores cupiditate similique assumenda velit
+                obcaecati! Ex voluptatem deserunt expedita.
+                Error eos iusto vel soluta nam amet, maiores quo nemo excepturi numquam tempore voluptatum facere quasi
+                dolor debitis esse mollitia est enim, officiis dolores optio. Labore inventore aut accusamus non.
+                Eum explicabo dicta, recusandae cum nulla quaerat placeat esse, excepturi autem rem et veritatis quam
+                aliquam quibusdam iste ex, ut minima architecto facilis voluptatem odit magnam voluptate inventore quae.
+                Impedit!
+                Maiores placeat suscipit, incidunt tenetur ex excepturi rem unde? Accusantium quidem aliquam impedit
+                necessitatibus numquam assumenda explicabo quo, vero nulla hic pariatur ullam fuga ipsa minima eveniet
+                neque similique aut.
+                Adipisci corporis fugit nostrum sunt repellat fuga. Non fugiat est saepe nisi quo dicta hic illum,
+                expedita placeat sequi explicabo asperiores molestiae vero corrupti tenetur incidunt minus vel
+                laboriosam id.
+                Quisquam eveniet cum amet laboriosam dolorem harum minus, quos, dolorum necessitatibus nihil beatae sed
+                eius atque quasi sequi molestiae voluptates pariatur facere. Provident veritatis iusto quidem nesciunt
+                esse officia quia.
+                Cupiditate blanditiis voluptates similique sunt. Commodi adipisci culpa placeat voluptas cum fugit ab
+                rem, reiciendis dolore quaerat atque officiis perspiciatis ullam praesentium sunt eaque. Maxime,
+                suscipit iure. Fuga, nobis hic!
+                Sunt dicta nemo tempora totam adipisci deserunt rem officiis dolores dolorum optio aspernatur vero
+                libero repudiandae pariatur assumenda laborum, impedit commodi beatae doloribus molestiae obcaecati
+                asperiores sint. Beatae, magni aut!</p>
         </div>
         <div class="vertical-break"></div>
         <aside id="spotlight-section">
@@ -72,6 +128,15 @@
     </article>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="logic.js"></script>
 
 </body>
