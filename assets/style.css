@@ -88,7 +88,7 @@ body {
 
 /* about section */
 #about {
-    width: 80%;
+    min-width: 80%;
     margin: 0 auto;
     padding: 125px 20px;
     font-size: 20px;
@@ -104,7 +104,7 @@ body {
 
 /* projects section */
 article h2 {
-    padding: 15px 20px;
+    padding: 65px 20px 15px 20px;
     font-size: 32px;
     margin-bottom: 40px;
     font-family: 'Open Sans', sans-serif;
@@ -112,7 +112,7 @@ article h2 {
 }
 
 .card {
-    max-width: 400px;
+    max-width: 350px;
     margin-bottom: 25px;
 }
 
@@ -127,7 +127,7 @@ article h2 {
 }
 
 /* resume section */
-.resume {
+#resume {
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -147,13 +147,13 @@ article h2 {
     border: 2px solid transparent;
     color: #fdfdfa;
     background-color: #163485;
+    text-decoration: none;
 }
 
 #ryan-picture {
-    height: 265px;
-    width: 265px;
+    max-width: 265px;
     border-radius: 50%;
-    margin-top: 75px;
+    margin-top: 125px;
 }
 
 
