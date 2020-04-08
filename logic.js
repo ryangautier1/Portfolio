@@ -1,28 +1,126 @@
 $(document).ready(function () {
 
-    var navPosition = $("#navbar").offset().top;
+    // $(window).load = updateNav();
+    
 
-    $(window).scroll(function () {
-        // if the window is at the bottom of the cover page
-        if ($(window).scrollTop() >= navPosition) {
+    var navPosition = $("#navbar").offset().top;
+    var projectPosition = $("#projects").offset().top - 10;
+    var resumePosition = $("#resume").offset().top - 10;
+    var contactPosition = $("#contact-break").offset().top - 10;
+
+
+    // console.log($("#contact-break").offset().top - 5);
+
+    $(window).scroll(function(){
+        if ($(window).scrollTop() >= (navPosition) && ($(window).scrollTop() < projectPosition)) {
+        // make navbar sticky
+        $("#navbar").addClass("sticky");
+        $("#cover-screen").addClass("extra-margin");
+        // change active tab on nav bar
+        $("#home-link").removeClass("current-page");
+        $("#about-link").addClass("current-page");
+        $("#projects-link").removeClass("current-page");
+        $("#resume-link").removeClass("current-page");
+        $("#contact-link").removeClass("current-page");
+    }
+    // if the window is between the projects section and the resume section
+    else if ($(window).scrollTop() >= (projectPosition) && $(window).scrollTop() < resumePosition){
+        // make navbar sticky
+        $("#navbar").addClass("sticky");
+        $("#cover-screen").addClass("extra-margin");
+        // change active tab on nav bar
+        $("#home-link").removeClass("current-page");
+        $("#about-link").removeClass("current-page");
+        $("#projects-link").addClass("current-page");
+        $("#resume-link").removeClass("current-page");
+        $("#contact-link").removeClass("current-page");
+    }
+    // if the window is between the resume section and the contact section
+    else if ($(window).scrollTop() >= (resumePosition) && $(window).scrollTop() < contactPosition){
+        // make navbar sticky
+        $("#navbar").addClass("sticky");
+        $("#cover-screen").addClass("extra-margin");
+        // change active tab on nav bar
+        $("#home-link").removeClass("current-page");
+        $("#about-link").removeClass("current-page");
+        $("#projects-link").removeClass("current-page");
+        $("#resume-link").addClass("current-page");
+        $("#contact-link").removeClass("current-page");
+    }
+    // if the window is at the contact-break section
+    else if ($(window).scrollTop() >= (contactPosition)){
+        // make navbar sticky
+        $("#navbar").addClass("sticky");
+        $("#cover-screen").addClass("extra-margin");
+        // change active tab on nav bar
+        $("#home-link").removeClass("current-page");
+        $("#about-link").removeClass("current-page");
+        $("#projects-link").removeClass("current-page");
+        $("#resume-link").removeClass("current-page");
+        $("#contact-link").addClass("current-page");
+    }
+    else{
+        // take stickiness away
+        $("#navbar").removeClass("sticky");
+        $("#cover-screen").removeClass("extra-margin");
+        // change active tab on nav bar
+        $("#home-link").addClass("current-page");
+        $("#about-link").removeClass("current-page");
+        $("#projects-link").removeClass("current-page");
+        $("#resume-link").removeClass("current-page");
+        $("#contact-link").removeClass("current-page");
+    }
+});
+
+    function updateNav(){
+        if ($(window).scrollTop() >= (navPosition-5) && ($(window).scrollTop() < $("#projects").offset().top)) {
             // make navbar sticky
             $("#navbar").addClass("sticky");
             $("#cover-screen").addClass("extra-margin");
-            
             // change active tab on nav bar
             $("#home-link").removeClass("current-page");
             $("#about-link").addClass("current-page");
+            $("#projects-link").removeClass("current-page");
+            $("#resume-link").removeClass("current-page");
+            $("#contact-link").removeClass("current-page");
         }
-        else {
-            $("#navbar").removeClass("sticky");
-            $("#cover-screen").removeClass("extra-margin");
-
+        // if the window is between the projects section and the resume section
+        else if ($(window).scrollTop() >= ($("#projects").offset().top-5) && $(window).scrollTop() < $("#resume").offset().top){
+            // make navbar sticky
+            $("#navbar").addClass("sticky");
+            $("#cover-screen").addClass("extra-margin");
             // change active tab on nav bar
-            $("#home-link").addClass("current-page");
+            $("#home-link").removeClass("current-page");
             $("#about-link").removeClass("current-page");
+            $("#projects-link").addClass("current-page");
+            $("#resume-link").removeClass("current-page");
+            $("#contact-link").removeClass("current-page");
         }
-
-    });
+        // if the window is between the resume section and the contact section
+        else if ($(window).scrollTop() >= ($("#resume").offset().top-5) && $(window).scrollTop() < $("#contact-break").offset().top){
+            // make navbar sticky
+            $("#navbar").addClass("sticky");
+            $("#cover-screen").addClass("extra-margin");
+            // change active tab on nav bar
+            $("#home-link").removeClass("current-page");
+            $("#about-link").removeClass("current-page");
+            $("#projects-link").removeClass("current-page");
+            $("#resume-link").addClass("current-page");
+            $("#contact-link").removeClass("current-page");
+        }
+        // if the window is at the contact-break section
+        else if ($(window).scrollTop() >= (contactPosition-5)){
+            // make navbar sticky
+            $("#navbar").addClass("sticky");
+            $("#cover-screen").addClass("extra-margin");
+            // change active tab on nav bar
+            $("#home-link").removeClass("current-page");
+            $("#about-link").removeClass("current-page");
+            $("#projects-link").removeClass("current-page");
+            $("#resume-link").removeClass("current-page");
+            $("#contact-link").addClass("current-page");
+        }
+    }
 
     // hover functions
     $("#lunch-and-wag").hover(function() {
