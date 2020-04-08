@@ -24,6 +24,7 @@ $(document).ready(function () {
 
     });
 
+    // hover functions
     $("#lunch-and-wag").hover(function() {
         $("#lunch-and-wag").addClass("shadow");
     }, function() {
@@ -36,13 +37,15 @@ $(document).ready(function () {
         $("#weather").removeClass("shadow");
     });
 
+    $("#work-day-scheduler").hover(function() {
+        $("#work-day-scheduler").addClass("shadow");
+    }, function() {
+        $("#work-day-scheduler").removeClass("shadow");
+    });
 
-//     $().mousemove(function(event){
-//         if($(".card:hover").length != 0){
-//             console.log($(event.target));
-//            $(event.target).addClass("shadow");
-//        } else{
-//            $(".card").removeClass("shadow");
-//        }
-//    });
+    $("#code-quiz").hover(function() {
+        $("#code-quiz").addClass("shadow");
+    }, function() {
+        $("#code-quiz").removeClass("shadow");
+    });
 })
