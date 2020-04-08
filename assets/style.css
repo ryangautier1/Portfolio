@@ -49,7 +49,7 @@ body {
     padding-top: 10px;
     display: flex;
     background-color: #10255e;
-    z-index: 1;
+    z-index: 3;
 }
 
 .nav-link {
@@ -62,6 +62,7 @@ body {
     padding: 7px 5px 3px;
     color: #fdfdfa;
     text-decoration: none;
+    font-size: 16px;
 }
 
 .nav-link:hover {
@@ -92,7 +93,7 @@ body {
 
 /* about section */
 #about {
-    min-width: 80%;
+    max-width: 80%;
     margin: 0 auto;
     padding: 125px 20px;
     font-size: 20px;
@@ -168,6 +169,7 @@ body {
     position: relative;
     bottom: -30px;
     background-color: #fdfdfa;
+    z-index: 2;
 }
 
 #contact {
@@ -175,7 +177,6 @@ body {
     background-image: linear-gradient(#333, #1a1a1a);
     color: #fdfdfa;
     position: relative;
-    z-index: -1;
 }
 
 #contact h2 {
@@ -223,47 +224,47 @@ body {
 
 #attribute-icons {
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fdfdfa;
+    text-align: center;
+    font-size: 14px;
 }
 
-@media screen and (max-width: 768px) {
-    #about-me {
-        width: 50%;
+@media screen and (max-width: 820px) {
+    #contact h2 {
+        margin-bottom: 20px;
     }
-    #ryan-picture {
-        height: 250px; 
+    .fa-github {
+        bottom: 40px;
+    }
+    .fa-linkedin {
+        bottom: 40px;
     }
 }
 
 @media screen and (max-width: 576px) {
-    header {
-        width: 100%;
-        text-align: center;
+    #cover-screen h1 {
+        font-size: 30px;
+        margin: 0 15px;
+    }
+    #continue-btn{
+        margin-top: 30px;
+        font-size: 18px;
     }
     nav {
         justify-content: space-around;
     }
-    #aboutme-article {
-        flex-direction: column;
+    .nav-link {
+        margin: 0;
+        font-size: 14px;
     }
-    article h2 {
-        padding: 15px 20px;
-        font-size: 32px;
-        font-family: 'Open Sans', sans-serif;
+    #about {
+        font-size: 16px;
     }
-    #about-me {
-        width: 100%;
-    }
-    
-    #ryan-picture {
-        height: 250px; 
-    }
-    
-    article p {
-        line-height: 150%;
-        margin: 0 20px;
+    .skills {
+        font-size: 18px;
+        color: #163485;
     }
 }
