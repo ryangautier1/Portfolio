@@ -1,13 +1,11 @@
-/* reload the page if the window is resized. This is needed to reset the
-position of elements variables for scrolling */
-window.addEventListener("resize", function () {
-    location.reload();
-    return false;
-});
-
 $(document).ready(function () {
 
-
+    /* reload the page if the window is resized. This is needed to reset the
+    position of elements variables for scrolling */
+    $(window).resize(function () {
+        location.reload();
+        return false;
+    })
 
     // define position of elements for scrolling
     var navPosition = $("#navbar").offset().top;
