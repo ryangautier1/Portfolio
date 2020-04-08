@@ -1,11 +1,14 @@
 $(document).ready(function () {
 
+    var height = $(window).height();
     /* reload the page if the window is resized. This is needed to reset the
     position of elements variables for scrolling */
     $(window).resize(function () {
-        location.reload();
-        return false;
-    })
+        if (Math.abs($(window).height() - height) > 55) {
+            location.reload();
+            return false;
+        }
+    });
 
     // define position of elements for scrolling
     var navPosition = $("#navbar").offset().top;
