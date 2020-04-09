@@ -4,6 +4,7 @@ $(document).ready(function () {
     /* reload the page if the window is resized. This is needed to reset the
     position of elements variables for scrolling */
     $(window).resize(function () {
+        // check if the window resized more than it does when mobile browsers hide the navbar
         if (Math.abs($(window).height() - height) > 55) {
             location.reload();
             return false;
@@ -103,5 +104,15 @@ $(document).ready(function () {
         $("#code-quiz").addClass("shadow");
     }, function () {
         $("#code-quiz").removeClass("shadow");
+    });
+
+    $("#lunch-and-wag-link").hover(function () {
+        $("#lunch-and-wag-link").addClass("shadow");
+    }, function () {
+        $("#lunch-and-wag-link").removeClass("shadow");
+    });
+    $("#lunch-and-wag-link").on("click", function () {
+        console.log("You clicked the github!");
+        window.open('https://github.com/ryangautier1/Lunch-and-Wag', '_blank')
     });
 })

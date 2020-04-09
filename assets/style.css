@@ -9,6 +9,10 @@ body {
     background-color: #fdfdfa;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 /* cover page */
 #cover-screen {
     height: 100vh;
@@ -119,6 +123,7 @@ body {
 .card {
     max-width: 350px;
     margin-bottom: 25px;
+    position: relative;
 }
 
 .card:hover, .card-text {
@@ -126,9 +131,36 @@ body {
     color: #333;
 }
 
+.card-title {
+    color: #333;
+    font-size: 22px;
+}
+
+.card a::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .project-img {
     width: 75%;
     margin: 0 auto;
+}
+
+.card-github {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 2;
+}
+
+.card-github:hover {
+    opacity: 50%;
 }
 
 /* resume section */
@@ -196,30 +228,28 @@ body {
     color: #72E5F9;
 }
 
-.fab{
-    font-size: 45px;
-}
-
-.fa-github {
+#github-contact {
     position: absolute;
     bottom: 50px;
     left: 50px;
     color:  #fdfdfa;
+    font-size: 45px;
 }
 
-.fa-linkedin {
+#linkedin-contact {
     position: absolute;
     bottom: 50px;
     right: 50px;
     color:  #fdfdfa;
+    font-size: 45px;
 }
 
-.fa-github:hover {
-    color: #c5c5c4;
+#github-contact:hover {
+    color: #a8a8a6;
 }
 
-.fa-linkedin:hover {
-    color: #c5c5c4;
+#linkedin-contact:hover {
+    color: #a8a8a6;
 }
 
 #attribute-icons {
@@ -236,10 +266,10 @@ body {
     #contact h2 {
         margin-bottom: 20px;
     }
-    .fa-github {
+    #github-contact {
         bottom: 40px;
     }
-    .fa-linkedin {
+    #linkedin-contact {
         bottom: 40px;
     }
     #resume-btn{
