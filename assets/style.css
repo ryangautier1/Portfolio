@@ -254,7 +254,7 @@ a:hover {
 
 #attribute-icons {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fdfdfa;
@@ -268,9 +268,11 @@ a:hover {
     }
     #github-contact {
         bottom: 40px;
+        left: 30px;
     }
     #linkedin-contact {
         bottom: 40px;
+        right: 30px;
     }
     #resume-btn{
         margin-bottom: 0;
