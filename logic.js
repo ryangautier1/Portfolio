@@ -100,19 +100,15 @@ $(document).ready(function () {
         $("#work-day-scheduler").removeClass("shadow");
     });
 
-    $("#code-quiz").hover(function () {
-        $("#code-quiz").addClass("shadow");
+    $("#avoid-the-orcas").hover(function () {
+        $("#avoid-the-orcas").addClass("shadow");
     }, function () {
-        $("#code-quiz").removeClass("shadow");
+        $("#avoid-the-orcas").removeClass("shadow");
     });
 
     $("#lunch-and-wag-link").hover(function () {
         $("#lunch-and-wag-link").addClass("shadow");
     }, function () {
         $("#lunch-and-wag-link").removeClass("shadow");
-    });
-    $("#lunch-and-wag-link").on("click", function () {
-        console.log("You clicked the github!");
-        window.open('https://github.com/ryangautier1/Lunch-and-Wag', '_blank')
     });
 })
