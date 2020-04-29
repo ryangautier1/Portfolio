@@ -13,9 +13,9 @@ $(document).ready(function () {
 
     // define position of elements for scrolling
     var navPosition = $("#navbar").offset().top;
-    var projectPosition = $("#projects").offset().top - 10;
-    var resumePosition = $("#resume").offset().top - 10;
-    var contactPosition = $("#contact-break").offset().top - 10;
+    var projectPosition = $("#projects").offset().top - 20;
+    var resumePosition = $("#resume").offset().top - 20;
+    var contactPosition = $("#contact-break").offset().top - 20;
 
     $(window).scroll(function () {
         // if the window is between the cover section and the projects section
