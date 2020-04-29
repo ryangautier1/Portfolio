@@ -40,7 +40,7 @@ a:hover {
     font-family: 'Roboto Mono', sans-serif;
 }
 
-#continue-btn:hover, .current-page:hover{
+#continue-btn:hover{
     border: 2px solid transparent;
     color: #10255e;
     background-color: #72E5F9;
@@ -81,9 +81,17 @@ a:hover {
 
 .current-page {
     /* border-color: #b10101 #10255e transparent; */
-    border: 2px solid #72E5F9;
+    border: 2px solid #fdfdfa;
     /* background-color: #fdfdfa; */
-    color: #72E5F9;
+    color: #fdfdfa;
+    border-radius: 10px;
+}
+
+.current-page:hover{
+    border-color: transparent;
+    color: #10255e;
+    background-color: #fdfdfa;
+    text-decoration: none;
 }
 
 /* .current-page:hover {
@@ -94,9 +102,9 @@ a:hover {
 /* about section */
 #about {
     padding: 75px 20px;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 150%;
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Mukta', sans-serif;
 }
 
 #about-text {
@@ -303,11 +311,11 @@ a:hover {
         justify-content: space-around;
     }
     .nav-link {
-        margin: 0;
+        margin: 0 0 7px 0;
         font-size: 14px;
     }
     #about {
-        font-size: 16px;
+        font-size: 18px;
     }
     .skills {
         font-size: 18px;
