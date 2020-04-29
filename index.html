@@ -17,9 +17,9 @@
 
 <body>
     <header>
-        <div id="cover-screen">
+        <div id="cover-screen" class="d-flex justify-content-center align-items-center flex-column">
             <h1>Hello, my name is Ryan Gautier.<br>Welcome to my website.</h1>
-            <a id="continue-btn" href="#about">Continue ></a>
+            <a id="continue-btn" href="#about" class="pb-2 pl-2 pr-2 pt-1">Continue ></a>
         </div>
         <div id="btm-cover"></div>
         <nav id="navbar">
@@ -32,16 +32,34 @@
     </header>
 
     <article id="about">
-        <p>I am a software engineer based in Austin, TX.
+        <div class="container-lg pb-5">
+            <div class="row d-flex justify-content-around">
+                <div class="about-pic d-flex col-xs-4 flex-column ml-3 mr-3">
+                    <img src="./assets/undraw_progressive_app_m9ms.svg" alt="Responsive Design" class="mb-4 mt-4">
+                    Responsive Design
+                </div>
+                <div class="about-pic d-flex col-xs-4 flex-column ml-3 mr-3">
+                    <img src="./assets/undraw_collaborators_prrw.svg" alt="Collaboration" class="mb-4 mt-4">
+                    Collaboration
+                </div>
+                <div class="about-pic d-flex col-xs-4 flex-column ml-3 mr-3">
+                    <img src="./assets/undraw_version_control_9bpv.svg" alt="Version Control" class="mb-4 mt-4">
+                    Version Control
+                </div>
+            </div>
+        </div>
+
+        <p class="pt-5" id="about-text">I am a software engineer based in Austin, TX.
             <br>
             My passion is problem solving, which is why I love what I do.
             <br><br>
             My skillset includes
             <br>
-            <span class="skills">HTML, CSS, Bootstrap, JavaScript, jQuery, and Node.js.</span>
+            <span class="skills">HTML, CSS, Bootstrap, JavaScript, jQuery, Node, Express, and MySQL.</span>
             <br><br>
             I'd love for you to take a look at some of my projects below and see what I'm all about!
         </p>
+
     </article>
     <!-- <a href="https://github.com/ryangautier1" target="_blank"><i class="fab fa-github "></i></a> -->
     <!-- <a href="#" class="card-github-link"><img src="assets/github-image.png" class="card-github-img" alt="Github Logo"></a> -->
@@ -67,7 +85,7 @@
                 <div class="card" id="avoid-the-orcas">
                     <img src="assets/find-orcas-image.png" class="card-img-top project-img" alt="Avoid The Orcas">
                     <a href="https://github.com/ryangautier1/AvoidTheOrcas" target="_blank"><img
-                        src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
+                            src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
                     <div class="card-body">
                         <a href="https://ryangautier1.github.io/AvoidTheOrcas/" target="_blank">
                             <h5 class="card-title">Avoid The Orcas</h5>

@@ -17,10 +17,6 @@ a:hover {
 #cover-screen {
     height: 100vh;
     background-image: linear-gradient(#163485, #10255e);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 #cover-screen h1 {
@@ -31,16 +27,20 @@ a:hover {
     line-height: 150%;
 }
 
+.nav-link:hover {
+    color: #fdfdfa;
+    text-decoration: none;
+}
+
 #continue-btn{
     margin-top: 50px;
     font-size: 24px;
     border: 2px solid #72E5F9;
-    padding: 5px 10px 7px;
     color: #72E5F9;
     font-family: 'Roboto Mono', sans-serif;
 }
 
-#continue-btn:hover{
+#continue-btn:hover, .current-page:hover{
     border: 2px solid transparent;
     color: #10255e;
     background-color: #72E5F9;
@@ -50,7 +50,7 @@ a:hover {
 /* navbar */
 #navbar {
     margin-bottom: 20px;
-    padding-top: 10px;
+    padding-top: 7px;
     display: flex;
     background-color: #10255e;
     z-index: 3;
@@ -58,20 +58,15 @@ a:hover {
 
 .nav-link {
     width: 75px;
-    border: solid 1px transparent;
+    border: solid 2px transparent;
     border-top: solid 4px transparent;
-    border-radius: 10px 10px 0 0;
+    /* border-radius: 10px 10px 0 0; */
     text-align: center;
-    margin: 0 20px;
+    margin: 0 20px 7px;
     padding: 7px 5px 3px;
     color: #fdfdfa;
     text-decoration: none;
     font-size: 16px;
-}
-
-.nav-link:hover {
-    color: #fdfdfa;
-    text-decoration: none;
 }
 
 .sticky {
@@ -85,30 +80,38 @@ a:hover {
 }
 
 .current-page {
-    border-color: #b10101 #10255e transparent;
-    background-color: #fdfdfa;
-    color: #333;
+    /* border-color: #b10101 #10255e transparent; */
+    border: 2px solid #72E5F9;
+    /* background-color: #fdfdfa; */
+    color: #72E5F9;
 }
 
-.current-page:hover {
-    color: #333;
+/* .current-page:hover {
+    color: #10255e;
     text-decoration: none;
-}
+} */
 
 /* about section */
 #about {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 125px 20px;
+    padding: 75px 20px;
     font-size: 20px;
     line-height: 150%;
     font-family: 'Roboto Mono', sans-serif;
+}
+
+#about-text {
+    max-width: 80%;
     text-align: center;
+    margin: 0 auto;
 }
 
 .skills {
     font-size: 24px;
     color: #163485;
+}
+
+.about-pic img {
+    max-height: 110px;
 }
 
 /* projects section */
@@ -261,6 +264,14 @@ a:hover {
     text-align: center;
     font-size: 14px;
 }
+
+@media screen and (max-width: 950px) {
+    .about-pic img {
+        max-height: 80px;
+        margin-top: 30px;
+    }
+}
+
 
 @media screen and (max-width: 820px) {
     #contact h2 {
