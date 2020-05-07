@@ -161,6 +161,11 @@ a:hover {
     margin: 0 auto;
 }
 
+.readme-img {
+    height: 63%;
+    margin: 0 auto;
+}
+
 .card-github {
     height: 35px;
     width: 35px;

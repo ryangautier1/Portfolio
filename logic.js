@@ -94,6 +94,12 @@ $(document).ready(function () {
         $("#weather").removeClass("shadow");
     });
 
+    $("#readme").hover(function () {
+        $("#readme").addClass("shadow");
+    }, function () {
+        $("#readme").removeClass("shadow");
+    });
+
     $("#work-day-scheduler").hover(function () {
         $("#work-day-scheduler").addClass("shadow");
     }, function () {
@@ -104,6 +110,12 @@ $(document).ready(function () {
         $("#avoid-the-orcas").addClass("shadow");
     }, function () {
         $("#avoid-the-orcas").removeClass("shadow");
+    });
+
+    $("#tv-tracker").hover(function () {
+        $("#tv-tracker").addClass("shadow");
+    }, function () {
+        $("#tv-tracker").removeClass("shadow");
     });
 
     $("#lunch-and-wag-link").hover(function () {
