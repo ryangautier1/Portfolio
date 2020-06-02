@@ -277,7 +277,7 @@ a:hover {
     color: #a8a8a6;
 }
 
-#attribute-icons {
+.photo-attribute {
     position: absolute;
     bottom: 20px;
     left: 50%;
