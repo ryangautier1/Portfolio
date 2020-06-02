@@ -14,10 +14,19 @@ a:hover {
 }
 
 /* cover page */
-#cover-screen {
+/* #cover-screen {
     height: 100vh;
     background-image: linear-gradient(#163485, #10255e);
-}
+} */
+
+#cover-screen {
+    background-image: url("./portfolio-background.jpg");
+    background-color: #10255e;
+    height: 100vh;
+    min-width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 
 #cover-screen h1 {
     font-family: 'Inria Sans', sans-serif;
@@ -52,7 +61,7 @@ a:hover {
     margin-bottom: 20px;
     padding-top: 7px;
     display: flex;
-    background-color: #10255e;
+    background-color: #2a1348;
     z-index: 3;
 }
 

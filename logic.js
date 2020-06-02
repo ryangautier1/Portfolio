@@ -81,29 +81,29 @@ $(document).ready(function () {
     });
 
 
-    // hover functions
+    // hover functions. Must be unique for each card so only the desired card gets shadow
     $("#lunch-and-wag").hover(function () {
         $("#lunch-and-wag").addClass("shadow");
     }, function () {
         $("#lunch-and-wag").removeClass("shadow");
     });
 
-    $("#weather").hover(function () {
-        $("#weather").addClass("shadow");
+    $("#digital-class").hover(function () {
+        $("#digital-class").addClass("shadow");
     }, function () {
-        $("#weather").removeClass("shadow");
+        $("#digital-class").removeClass("shadow");
+    });
+
+    $("#google-books").hover(function () {
+        $("#google-books").addClass("shadow");
+    }, function () {
+        $("#google-books").removeClass("shadow");
     });
 
     $("#readme").hover(function () {
         $("#readme").addClass("shadow");
     }, function () {
         $("#readme").removeClass("shadow");
-    });
-
-    $("#work-day-scheduler").hover(function () {
-        $("#work-day-scheduler").addClass("shadow");
-    }, function () {
-        $("#work-day-scheduler").removeClass("shadow");
     });
 
     $("#avoid-the-orcas").hover(function () {
@@ -116,11 +116,5 @@ $(document).ready(function () {
         $("#tv-tracker").addClass("shadow");
     }, function () {
         $("#tv-tracker").removeClass("shadow");
-    });
-
-    $("#lunch-and-wag-link").hover(function () {
-        $("#lunch-and-wag-link").addClass("shadow");
-    }, function () {
-        $("#lunch-and-wag-link").removeClass("shadow");
-    });
+    })
 })
