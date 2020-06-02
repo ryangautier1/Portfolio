@@ -44,15 +44,15 @@ a:hover {
 #continue-btn{
     margin-top: 50px;
     font-size: 24px;
-    border: 2px solid #72E5F9;
-    color: #72E5F9;
+    border: 2px solid #fff;
+    color: #fff;
     font-family: 'Roboto Mono', sans-serif;
 }
 
 #continue-btn:hover{
     border: 2px solid transparent;
     color: #10255e;
-    background-color: #72E5F9;
+    background-color: #fff;
     text-decoration: none;
 }
 
