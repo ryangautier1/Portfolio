@@ -172,11 +172,18 @@
     <article id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>Phone: <span id="contact-info">214-236-9199</span>
-                <br>
-                <br>
-                Email: <span id="contact-info">ryangautier2@gmail.com</span>
-            </p>
+            <form action="mailto:ryangautier2@gmail.com?subject=Message from Ryan's Portfolio" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" name="name" id="name" />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <br />
+                    <textarea name="message" class="form-control"></textarea>
+                </div>
+                <button type="submit" id="contact-btn">Send</button>
+            </form>
         </div>
         <footer>
             <a href="https://github.com/ryangautier1" target="_blank"><i class="fab fa-github"

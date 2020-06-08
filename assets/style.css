@@ -253,6 +253,39 @@ a:hover {
     color: #72E5F9;
 }
 
+#contact-btn{
+    margin: 35px 0 75px 0;
+    font-size: 20px;
+    border: 2px solid #fdfdfa;
+    border-radius: 4px;
+    padding: 5px 10px 7px;
+    background-color: transparent;
+    color: #fdfdfa;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.form-control, .form-control:focus {
+    background-color: transparent;
+    color: #fdfdfa;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+form {
+    padding: 0 20px;
+}
+
+
+#contact-btn:hover{
+    border: 2px solid transparent;
+    color: #333;
+    border-radius: 4px;
+    background-color: #fdfdfa;
+    text-decoration: none;
+}
+
 #github-contact {
     position: absolute;
     bottom: 50px;
