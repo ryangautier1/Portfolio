@@ -80,7 +80,6 @@ $(document).ready(function () {
         }
     });
 
-
     // hover functions. Must be unique for each card so only the desired card gets shadow
     $("#lunch-and-wag").hover(function () {
         $("#lunch-and-wag").addClass("shadow");
