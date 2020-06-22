@@ -335,7 +335,7 @@ form {
 
 @media screen and (max-width: 576px) {
     #cover-screen {
-        background-size: 100% 100%; 
+        background-image: url("./portfolio-background-phone.jpg");
       }
     #cover-screen h1 {
         font-size: 30px;
