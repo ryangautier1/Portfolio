@@ -1,3 +1,7 @@
+// implement lozad
+const observer = lozad();
+observer.observe();
+
 $(document).ready(function () {
 
     var height = $(window).height();
