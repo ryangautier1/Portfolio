@@ -72,6 +72,13 @@ a:hover {
     font-size: 16px;
 }
 
+/* this class is added by logic.js to navbar */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .extra-margin {
     margin-bottom: 67px;
 }
@@ -115,11 +122,15 @@ a:hover {
 
 /* projects section */
 #projects h2 {
+    border-bottom: 1px solid #5e5d5d;
+}
+
+/* for projects heading and contact heading */
+h2 {
     padding: 65px 20px 15px 20px;
     font-size: 32px;
     margin-bottom: 40px;
     font-family: 'Open Sans', sans-serif;
-    border-bottom: 1px solid #5e5d5d;
 }
 
 .card {
@@ -156,7 +167,6 @@ a:hover {
     z-index: 2;
 }
 
-
 .project-img {
     width: 75%;
     margin: 0 auto;
@@ -184,8 +194,8 @@ a:hover {
 #resume {
     display: flex;
     align-items: center;
-    justify-content: center; 
-    flex-direction: column;  
+    justify-content: center;
+    flex-direction: column;
 }
 
 #resume-btn{
@@ -210,7 +220,6 @@ a:hover {
     margin-top: 125px;
 }
 
-
 /* contact section */
 #contact-break {
     height: 20vh;
@@ -226,19 +235,6 @@ a:hover {
     background-image: linear-gradient(#333, #1a1a1a);
     color: #fdfdfa;
     position: relative;
-}
-
-#contact h2 {
-    padding: 65px 20px 15px 20px;
-    font-size: 32px;
-    margin-bottom: 40px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-#contact p {
-    line-height: 150%;
-    margin: 0 20px;
-    font-size: 20px;
 }
 
 #contact-info {
