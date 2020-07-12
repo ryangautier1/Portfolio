@@ -15,12 +15,21 @@ a:hover {
 
 /* cover page */
 #cover-screen {
-    background-image: url("./portfolio-background.jpg");
-    background-color: #10255e;
+    /* background-image: url("./portfolio-background.jpg"); */
     height: 100vh;
-    min-width: 100%;
-    background-attachment: fixed;
-    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
+  }
+
+  .cover-screen-bg {
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      z-index: 0;
+      overflow: hidden;
+      display: inline-block;
   }
 
 #cover-screen h1 {
@@ -29,6 +38,7 @@ a:hover {
     font-size: 42px;
     text-align: center;
     line-height: 150%;
+    z-index: 10;
 }
 
 .nav-link:hover {
@@ -42,6 +52,7 @@ a:hover {
     border: 2px solid #fff;
     color: #fff;
     font-family: 'Roboto Mono', sans-serif;
+    z-index: 10;
 }
 
 #continue-btn:hover{
@@ -334,9 +345,13 @@ form {
 }
 
 @media screen and (max-width: 576px) {
-    #cover-screen {
-        background-image: url("./portfolio-background-phone.jpg");
-      }
+    .cover-screen-bg {
+        height: 100vh;
+        width: 200vw;
+        top: 0;
+        /* right: 100px; */
+        z-index: 0;
+    }
     #cover-screen h1 {
         font-size: 30px;
         margin: 0 15px;
