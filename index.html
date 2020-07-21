@@ -37,7 +37,9 @@
         <div id="cover-screen" class="d-flex justify-content-center align-items-center flex-column position-relative">
             <h1>Hello, my name is Ryan Gautier.<br>Welcome to my website.</h1>
             <a id="continue-btn" href="#about" class="pb-2 pl-2 pr-2 pt-1">Continue ></a>
-            <img class="cover-screen-bg position-absolute" src="https://res.cloudinary.com/dbhnjg0zu/image/upload/c_scale,q_auto:eco,w_800/v1594595278/portfolio-background_ycbtl9.jpg" alt="Cover Screen Painting Background"/>
+            <img class="cover-screen-bg position-absolute"
+                src="https://res.cloudinary.com/dbhnjg0zu/image/upload/c_scale,q_auto:eco,w_800/v1594595278/portfolio-background_ycbtl9.jpg"
+                alt="Cover Screen Painting Background" />
         </div>
         <div id="btm-cover"></div>
         <nav id="navbar">
@@ -80,108 +82,90 @@
         </div>
     </article>
 
-    <article id="projects" class="container">
+    <article class="container" id="projects">
         <h2>Projects</h2>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="digital-class">
-                    <img src="assets/digitalclass.png" class="card-img-top project-img" alt="Digital Class Logo">
-                    <div class="card-body">
-                        <a href="https://github.com/aroblesgalit/digital-class" target="_blank">
-                            <img src="assets/github-image.png" class="card-github" alt="Github Logo" />
-                        </a>
-                        <a href="https://digital-class-production.herokuapp.com/" target="_blank" class="deployed-link"
-                            rel="noopener noreferrer">
-                            <h5 class="card-title">DigitalClass</h5>
-                        </a>
-                        <p class="card-text">A responsive full-stack MERN app allowing teachers to easily create and
-                            assign quizzes
-                            to their students, and students to take the quizzes.</p>
-                    </div>
-                    <div class="card-body">
-                        <a href="https://youtu.be/nlwMN5RwwP8" class="card-link demo-link" target="_blank"
-                            rel="noreferrer noopener"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
+        <div class="project-card" id="digital-class">
+            <img src="assets/digitalclass.png" class="project-img" alt="Digital Class Logo">
+            <div class="project-info">
+                <a href="https://github.com/aroblesgalit/digital-class" target="_blank">
+                    <img src="assets/github-image.png" class="card-github" alt="Github Logo" />
+                </a>
+                <a href="https://digital-class-production.herokuapp.com/" target="_blank" class="deployed-link"
+                    rel="noopener noreferrer">
+                    <h5 class="project-title">DigitalClass</h5>
+                </a>
+                <p class="project-description">A responsive full-stack MERN app allowing teachers to easily create and
+                    assign quizzes
+                    to their students, and students to take the quizzes.</p>
             </div>
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="tv-tracker">
-                    <img src="./assets/w4logo.png" class="card-img-top project-img" alt="Watch What Where and When">
-                    <a href="https://github.com/ryangautier1/Tv-Tracker" target="_blank"><img
-                            src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
-                    <div class="card-body">
-                        <a href="https://wfourbkf.herokuapp.com/" class="deployed-link" target="_blank">
-                            <h5 class="card-title">W4</h5>
-                        </a>
-                        <p class="card-text">W4 (Watch What Where When) is a responsive movie and tv streaming locator
-                            and
-                            watchlist storing service.</p>
-                    </div>
-                </div>
+            <div class="">
+                <a href="https://youtu.be/nlwMN5RwwP8" class="card-link demo-link" target="_blank"
+                    rel="noreferrer noopener"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="google-books">
-                    <img src="assets/googlebook.png" class="card-img-top project-img"
-                        alt="React Google Book Search Screenshot">
-                    <a href="https://github.com/ryangautier1/GoogleBookSearch" target="_blank"><img
-                            src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
-                    <div class="card-body">
-                        <a href="https://protected-badlands-39273.herokuapp.com/" class="deployed-link"
-                            target="_blank"></a>
-                        <h5 class="card-title">React Google Book Search</h5>
-                        </a>
-                        <p class="card-text">A full stack MERN app for searching and storing books utilizing the Google
-                            Books API.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="lunch-and-wag">
-                    <img src="assets/dog.png" class="card-img-top project-img" alt="Lunch and Wag Logo">
-                    <a href="https://github.com/ryangautier1/Lunch-and-Wag" target="_blank"><img
-                            src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
-                    <div class="card-body">
-                        <a href="https://ryangautier1.github.io/Lunch-and-Wag/" class="deployed-link" target="_blank">
-                            <h5 class="card-title">Lunch and Wag</h5>
-                        </a>
-                        <p class="card-text">A responsive application for finding nearby dog-friendly restaurants, and
-                            relevant
-                            information about them.</p>
-                    </div>
-                </div>
+
+        <div class="project-card" id="tv-tracker">
+            <img src="./assets/w4logo.png" class="project-img" alt="Watch What Where and When">
+            <a href="https://github.com/ryangautier1/Tv-Tracker" target="_blank"><img src="assets/github-image.png"
+                    class="card-github" alt="Github Logo" /></a>
+            <div class="project-info">
+                <a href="https://wfourbkf.herokuapp.com/" class="deployed-link" target="_blank">
+                    <h5 class="project-title">W4</h5>
+                </a>
+                <p class="project-description">W4 (Watch What Where When) is a responsive movie and tv streaming locator
+                    and
+                    watchlist storing service.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="readme">
-                    <!-- lazy loading with lozad -->
-                    <img data-src="https://github.com/ryangautier1/Readme-Generator/raw/master/ImplementationGif.gif"
-                        class="card-img-top readme-img lozad" alt="Readme-Generator">
-                    <a href="https://github.com/ryangautier1/Readme-Generator" target="_blank"><img
-                            src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
-                    <div class="card-body">
-                        <a href="https://github.com/ryangautier1/Readme-Generator" class="deployed-link"
-                            target="_blank">
-                            <h5 class="card-title">README Generator</h5>
-                        </a>
-                        <p class="card-text">CLI application for generating README's</p>
-                    </div>
-                </div>
+
+        <div class="project-card" id="google-books">
+            <img src="assets/googlebook.png" class="project-img" alt="React Google Book Search Screenshot">
+            <a href="https://github.com/ryangautier1/GoogleBookSearch" target="_blank"><img
+                    src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
+            <div class="project-info">
+                <h5 class="project-title">React Google Book Search</h5>
+                <a href="https://protected-badlands-39273.herokuapp.com/" class="deployed-link" target="_blank"></a>
+                </a>
+                <p class="project-description">A full stack MERN app for searching and storing books utilizing the Google
+                    Books API.</p>
             </div>
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="avoid-the-orcas">
-                    <img src="assets/find-orcas-image.png" class="card-img-top project-img" alt="Avoid The Orcas">
-                    <a href="https://github.com/ryangautier1/AvoidTheOrcas" target="_blank"><img
-                            src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
-                    <div class="card-body">
-                        <a href="https://ryangautier1.github.io/AvoidTheOrcas/" class="deployed-link" target="_blank">
-                            <h5 class="card-title">Avoid The Orcas</h5>
-                        </a>
-                        <p class="card-text">A recreation of classic Minesweeper using vanilla JavaScript.</p>
-                    </div>
-                </div>
+        </div>
+
+        <div class="project-card" id="lunch-and-wag">
+            <img src="assets/dog.png" class="project-img" alt="Lunch and Wag Logo">
+            <a href="https://github.com/ryangautier1/Lunch-and-Wag" target="_blank"><img src="assets/github-image.png"
+                    class="card-github" alt="Github Logo" /></a>
+            <div class="project-info">
+                <a href="https://ryangautier1.github.io/Lunch-and-Wag/" class="deployed-link" target="_blank">
+                    <h5 class="project-title">Lunch and Wag</h5>
+                </a>
+                <p class="project-description">A responsive application for finding nearby dog-friendly restaurants, and
+                    relevant
+                    information about them.</p>
+            </div>
+        </div>
+        <div class="project-card" id="readme">
+            <!-- lazy loading with lozad -->
+            <img data-src="https://github.com/ryangautier1/Readme-Generator/raw/master/ImplementationGif.gif"
+                class="readme-img lozad" alt="Readme-Generator">
+            <a href="https://github.com/ryangautier1/Readme-Generator" target="_blank"><img
+                    src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
+            <div class="project-info">
+                <a href="https://github.com/ryangautier1/Readme-Generator" class="deployed-link" target="_blank">
+                    <h5 class="project-title">README Generator</h5>
+                </a>
+                <p class="project-description">CLI application for generating README's</p>
+            </div>
+        </div>
+        <div class="project-card" id="avoid-the-orcas">
+            <img src="assets/find-orcas-image.png" class="project-img" alt="Avoid The Orcas">
+            <a href="https://github.com/ryangautier1/AvoidTheOrcas" target="_blank"><img src="assets/github-image.png"
+                    class="card-github" alt="Github Logo" /></a>
+            <div class="project-info">
+                <a href="https://ryangautier1.github.io/AvoidTheOrcas/" class="deployed-link" target="_blank">
+                    <h5 class="project-title">Avoid The Orcas</h5>
+                </a>
+                <p class="project-description">A recreation of classic Minesweeper using vanilla JavaScript.</p>
             </div>
         </div>
     </article>

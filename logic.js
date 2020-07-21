@@ -4,6 +4,18 @@ observer.observe();
 
 $(document).ready(function () {
 
+    $(".project-card").on('click', function(event) {
+        console.log(event.target.getAttribute("id"));
+        let id = event.target.getAttribute("id");
+        $("#" + id).children(".project-info").addClass('project-animate');
+        // $("#" + id).children(".project-info").children(".project-title").addClass('project-animate');
+    });
+    // $(".project-card").hover(function(event) {
+    //     console.log(event.target.getAttribute("id"));
+    //     let id = event.target.getAttribute("id");
+    //     $("#" + id).children(".project-info").children().addClass('project-animate');
+    // })
+
     var height = $(window).height();
     /* reload the page if the window is resized. This is needed to reset the
     position of elements variables for scrolling */
