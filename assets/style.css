@@ -190,6 +190,10 @@ h2 {
     opacity: 1;
 }
 
+.project-card:hover .project-img {
+    opacity: 0;
+}
+
 .project-animate .project-title {
     top: 10px;
     z-index: 2;
@@ -224,8 +228,9 @@ h2 {
 }
 
 .project-img {
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
+    z-index: 10;
 }
 
 .readme-img {
