@@ -172,6 +172,7 @@ h2 {
 
 .project-info {
     opacity: 0;
+    pointer-events: none;
     z-index: 2;
     position: absolute;
     top: 0;
@@ -182,13 +183,15 @@ h2 {
 
 .project-animate {
     opacity: 1;
+    display: block;
+    pointer-events: all;
 }
 
 /* project image animations */
 .project-img {
     width: 100%;
     z-index: 10;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 
 .img-animate {
@@ -198,7 +201,8 @@ h2 {
 /* project title animations */
 .project-title {
     text-align: center;
-    transition: 0.3s ease;
+    margin-top: -20px;
+    transition: 0.5s ease;
 }
 
 .title-animate {
@@ -209,23 +213,52 @@ h2 {
 .project-description {
     text-align: center;
     padding: 0 15px;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 
 .description-animate {
     margin: 10px;
 }
 
-.deployed-link {
-    border: 1px solid #163485;
-    color: #163485;
+/* project divider animations */
+.project-divider {
+    border-bottom: 1px solid #333;
+    width: 0;
+    height: 0;
+    margin: 20px 50%;
+    transition: 1s ease;
+}
+
+.divider-animate {
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* project button animations*/
+.link-buttons {
+    position: relative;
+    bottom: -100px;
+    transition: 0.5s ease;
+}
+
+.project-link {
+    border: 1px solid transparent;
+    position: relative;
+    color: #fdfdfa;
+    background-color: #333;
+    padding: 2px;
+    /* left: -50px; */
     font-family: 'Roboto Mono', sans-serif;
 }
 
-.deployed-link:hover{
-    border: 1px solid transparent;
-    color: #fdfdfa;
-    background-color: #163485;
+.link-animate {
+    bottom: 0px;
+}
+
+.project-link:hover{
+    border: 1px solid #333;
+    color: #333;
+    background-color: transparent;
     text-decoration: none;
 }
 /* 

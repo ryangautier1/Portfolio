@@ -20,6 +20,8 @@ $(document).ready(function () {
         $("#" + id).children(".project-info").addClass('project-animate');
         $("#" + id).children(".project-info").children(".project-title").addClass('title-animate');
         $("#" + id).children(".project-info").children(".project-description").addClass('description-animate');
+        $("#" + id).children(".project-info").children(".project-divider").addClass('divider-animate');
+        $("#" + id).children(".project-info").children(".link-buttons").addClass('link-animate');
         $("#" + id).children(".project-img").addClass('img-animate');
 
     });
