@@ -5,16 +5,29 @@ observer.observe();
 $(document).ready(function () {
 
     $(".project-card").on('click', function(event) {
-        console.log(event.target.getAttribute("id"));
-        let id = event.target.getAttribute("id");
+        // console.log(event.target);
+        let id;
+        // check if target was picture or card
+        // for image
+        if (event.target.classList.contains("project-img") || event.target.classList.contains("project-info")) {
+            let parent = event.target.parentNode;
+            id = parent.getAttribute("id");
+        }
+        // assume target is project-card
+        else {
+            id = event.target.getAttribute("id");
+        }
         $("#" + id).children(".project-info").addClass('project-animate');
-        // $("#" + id).children(".project-info").children(".project-title").addClass('project-animate');
+        $("#" + id).children(".project-info").children(".project-title").addClass('title-animate');
+        $("#" + id).children(".project-info").children(".project-description").addClass('description-animate');
+        $("#" + id).children(".project-img").addClass('img-animate');
+
     });
-    $(".project-card").hover(function(event) {
-        console.log(event.target.getAttribute("id"));
-        let id = event.target.getAttribute("id");
-        $("#" + id).children(".project-info").addClass('project-animate');
-    });
+    // $(".project-card").hover(function(event) {
+    //     console.log(event.target.getAttribute("id"));
+    //     let id = event.target.getAttribute("id");
+    //     $("#" + id).children(".project-info").addClass('project-animate');
+    // });
 
     var height = $(window).height();
     /* reload the page if the window is resized. This is needed to reset the
