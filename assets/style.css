@@ -145,30 +145,15 @@ h2 {
 }
 
 .project-card {
-    max-width: 350px;
+    max-width: 300px;
     margin-bottom: 25px;
     position: relative;
-    border: 1px solid #333;
 }
 
 .project-card:hover, .card-text {
     text-decoration: none;
     color: #333;
 }
-
-/* .project-card:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    z-index: 1;
-    -webkit-transition: 0.4s ease;
-    transition: 0.4s ease;
-    opacity: 0;
-} */
 
 .project-info {
     opacity: 0;
@@ -190,7 +175,8 @@ h2 {
 /* project image animations */
 .project-img {
     width: 100%;
-    z-index: 10;
+    height: 100%;
+    overflow: hidden;
     transition: 0.5s ease;
 }
 
@@ -201,7 +187,7 @@ h2 {
 /* project title animations */
 .project-title {
     text-align: center;
-    margin-top: -20px;
+    /* margin-top: -20px; */
     transition: 0.5s ease;
 }
 
