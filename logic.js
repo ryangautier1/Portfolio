@@ -49,6 +49,7 @@ $(document).ready(function () {
         $("#" + id).children(".project-img").addClass('img-animate');
         projectState[index] === true;
     }, function (event) {
+        // console.log(event.target);
         // mouse out function
         let id = event.target.getAttribute("data-project");
         let index = document.getElementById(id).getAttribute("data-index");
