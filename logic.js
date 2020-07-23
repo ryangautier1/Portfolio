@@ -8,7 +8,6 @@ $(document).ready(function () {
     const projectState = [false, false, false, false, false, false];
 
     $(".project-card").on('click', function(event) {
-        console.log(event.target);
         let id;
         let index;
         // check if target was picture or card
@@ -16,7 +15,6 @@ $(document).ready(function () {
         if (event.target.classList.contains("project-img") || event.target.classList.contains("project-info")) {
             let parent = event.target.parentNode;
             id = parent.getAttribute("id");
-            console.log("set id = ", id)
             index = parent.getAttribute("data-index");
         }
         // assume target is project-card
@@ -47,13 +45,7 @@ $(document).ready(function () {
             $("#" + id).children(".project-info").children(".project-divider").addClass('d-none');
         }
         projectState[index] = !projectState[index];
-        console.log(projectState[index]);
     });
-    // $(".project-card").hover(function(event) {
-    //     console.log(event.target.getAttribute("id"));
-    //     let id = event.target.getAttribute("id");
-    //     $("#" + id).children(".project-info").addClass('project-animate');
-    // });
 
     var height = $(window).height();
     /* reload the page if the window is resized. This is needed to reset the
