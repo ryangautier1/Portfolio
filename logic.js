@@ -4,26 +4,50 @@ observer.observe();
 
 $(document).ready(function () {
 
+    // 0 indicates project image showing, 1 indicates description showing
+    const projectState = [false, false, false, false, false, false];
+
     $(".project-card").on('click', function(event) {
-        // console.log(event.target);
+        console.log(event.target);
         let id;
+        let index;
         // check if target was picture or card
         // for image
         if (event.target.classList.contains("project-img") || event.target.classList.contains("project-info")) {
             let parent = event.target.parentNode;
             id = parent.getAttribute("id");
+            console.log("set id = ", id)
+            index = parent.getAttribute("data-index");
         }
         // assume target is project-card
         else {
             id = event.target.getAttribute("id");
+            index = event.target.getAttribute("data-index");
         }
-        $("#" + id).children(".project-info").addClass('project-animate');
-        $("#" + id).children(".project-info").children(".project-title").addClass('title-animate');
-        $("#" + id).children(".project-info").children(".project-description").addClass('description-animate');
-        $("#" + id).children(".project-info").children(".project-divider").addClass('divider-animate');
-        $("#" + id).children(".project-info").children(".link-buttons").addClass('link-animate');
-        $("#" + id).children(".project-img").addClass('img-animate');
 
+        // check state of target
+        // project image showing before click
+        if (projectState[index] === false) {
+            $("#" + id).children(".project-info").addClass('project-animate');
+            $("#" + id).children(".project-info").children(".project-title").addClass('title-animate');
+            $("#" + id).children(".project-info").children(".project-description").addClass('description-animate');
+            $("#" + id).children(".project-info").children(".project-divider").addClass('divider-animate');
+            $("#" + id).children(".project-info").children(".project-divider").removeClass('d-none');
+            $("#" + id).children(".project-info").children(".link-buttons").addClass('link-animate');
+            $("#" + id).children(".project-img").addClass('img-animate');
+        }
+        // project description showing
+        else {
+            $("#" + id).children(".project-info").removeClass('project-animate');
+            $("#" + id).children(".project-info").children(".project-title").removeClass('title-animate');
+            $("#" + id).children(".project-info").children(".project-description").removeClass('description-animate');
+            $("#" + id).children(".project-info").children(".project-divider").removeClass('divider-animate');
+            $("#" + id).children(".project-info").children(".link-buttons").removeClass('link-animate');
+            $("#" + id).children(".project-img").removeClass('img-animate');
+            $("#" + id).children(".project-info").children(".project-divider").addClass('d-none');
+        }
+        projectState[index] = !projectState[index];
+        console.log(projectState[index]);
     });
     // $(".project-card").hover(function(event) {
     //     console.log(event.target.getAttribute("id"));

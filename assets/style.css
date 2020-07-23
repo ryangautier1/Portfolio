@@ -247,7 +247,6 @@ h2 {
     color: #fdfdfa;
     background-color: #333;
     padding: 2px;
-    /* left: -50px; */
     font-family: 'Roboto Mono', sans-serif;
 }
 
@@ -261,42 +260,6 @@ h2 {
     background-color: transparent;
     text-decoration: none;
 }
-/* 
-.project-card:hover:after, .project-card:focus:after, .project-card:active:after{
-    opacity: 1;
-} */
-
-/* .project-card:hover:after .project-info, .project-card:focus:after .project-info, .project-card:active:after .project-info {
-    opacity: 1;
-} */
-
-/* .project-card:hover .project-img {
-    opacity: 0;
-} */
-
-/* .project-animate .project-title {
-    top: 10px;
-    z-index: 2;
-}
-
-.project-animate .project-description {
-    top: 50px;
-    z-index: 2;
-}
-
-.project-animate .deployed-link {
-    bottom: 20px;
-    z-index: 2;
-} */
-
-/* .deployed-link::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-} */
 
 .demo-link {
     color: #a70101;
@@ -305,11 +268,6 @@ h2 {
     bottom: 7px;
     left: 20px;
     z-index: 2;
-}
-
-.readme-img {
-    height: 63%;
-    margin: 0 auto;
 }
 
 .card-github {
