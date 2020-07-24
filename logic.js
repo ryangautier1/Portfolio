@@ -3,6 +3,13 @@ const observer = lozad();
 observer.observe();
 
 $(document).ready(function () {
+    // animate visible elements on page load
+    $('.myFadeIn').each(function () {
+        if (checkAnimatePos(this)) {
+            $(this).addClass('animate__fadeInUpBig');
+            $(this).removeClass('opacity-0');
+        }
+    })
 
     // 0 indicates project image showing, 1 indicates description showing
     const projectState = [false, false, false, false, false, false];
@@ -21,6 +28,9 @@ $(document).ready(function () {
             $("#" + id).children(".project-info").children(".project-divider").removeClass('d-none');
             $("#" + id).children(".project-info").children(".link-buttons").addClass('link-animate');
             $("#" + id).children(".project-img").addClass('img-animate');
+            if(id === "digital-class") {
+                $("#digital-class").addClass('digital-class-description-height');
+            }
         }
         // project description showing
         else {
@@ -31,6 +41,9 @@ $(document).ready(function () {
             $("#" + id).children(".project-info").children(".link-buttons").removeClass('link-animate');
             $("#" + id).children(".project-img").removeClass('img-animate');
             $("#" + id).children(".project-info").children(".project-divider").addClass('d-none');
+            if(id === "digital-class") {
+                $("#digital-class").removeClass('digital-class-description-height');
+            }
         }
         projectState[index] = !projectState[index];
     });
@@ -47,6 +60,9 @@ $(document).ready(function () {
         $("#" + id).children(".project-info").children(".project-divider").removeClass('d-none');
         $("#" + id).children(".project-info").children(".link-buttons").addClass('link-animate');
         $("#" + id).children(".project-img").addClass('img-animate');
+        if(id === "digital-class") {
+            $("#digital-class").addClass('digital-class-description-height');
+        }
         projectState[index] === true;
     }, function (event) {
         // console.log(event.target);
@@ -61,6 +77,9 @@ $(document).ready(function () {
         $("#" + id).children(".project-info").children(".link-buttons").removeClass('link-animate');
         $("#" + id).children(".project-img").removeClass('img-animate');
         $("#" + id).children(".project-info").children(".project-divider").addClass('d-none');
+        if(id === "digital-class") {
+            $("#digital-class").removeClass('digital-class-description-height');
+        }
         projectState[index] === false;
     });
 
