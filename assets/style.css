@@ -55,9 +55,6 @@ a:hover {
     color: #fff;
     font-family: 'Roboto Mono', sans-serif;
     z-index: 10;
-    animation: fadeIn;
-    animation-duration: 2s;
-    transition: ease 0.4s;
 }
 
 #continue-btn:hover{
