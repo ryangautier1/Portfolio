@@ -39,6 +39,8 @@ a:hover {
     text-align: center;
     line-height: 150%;
     z-index: 10;
+    animation: fadeIn;
+    animation-duration: 2s;
 }
 
 .nav-link:hover {
@@ -53,6 +55,9 @@ a:hover {
     color: #fff;
     font-family: 'Roboto Mono', sans-serif;
     z-index: 10;
+    animation: fadeIn;
+    animation-duration: 2s;
+    transition: ease 0.4s;
 }
 
 #continue-btn:hover{
@@ -81,6 +86,7 @@ a:hover {
     color: #fdfdfa;
     text-decoration: none;
     font-size: 16px;
+    transition: ease 0.2s;
 }
 
 /* this class is added by logic.js to navbar */
@@ -136,6 +142,10 @@ a:hover {
     border-bottom: 1px solid #5e5d5d;
 }
 
+#projects {
+    margin: 0 20px;
+}
+
 /* for projects heading and contact heading */
 h2 {
     padding: 65px 20px 15px 20px;
@@ -144,61 +154,121 @@ h2 {
     font-family: 'Open Sans', sans-serif;
 }
 
-.card {
-    max-width: 350px;
+.project-card {
+    max-width: 325px;
+    max-height: 300px;
+    min-height: 200px;
     margin-bottom: 25px;
     position: relative;
 }
 
-.card:hover, .card-text {
+#digital-class {
+    transition: ease 0.4s;
+}
+
+.digital-class-description-height {
+    min-height: 360px;
+}
+
+.project-card:hover, .card-text {
     text-decoration: none;
     color: #333;
 }
 
-.card-title {
-    color: #333;
-    font-size: 22px;
-}
-
-.deployed-link::after {
+.project-info {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
     position: absolute;
-    content: '';
     top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    transition: 0.4s ease;
+    height: 100%;
+    width: 100%;
 }
 
-.demo-link {
-    color: #a70101;
-    font-size: 32px;
-    position: absolute;
-    bottom: 7px;
-    left: 20px;
-    z-index: 2;
+.project-animate {
+    opacity: 1;
+    display: block;
+    pointer-events: all;
 }
 
+/* project image animations */
 .project-img {
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    transition: 0.5s ease;
 }
 
-.readme-img {
-    height: 63%;
-    margin: 0 auto;
+.img-animate {
+    opacity: 0;
 }
 
-.card-github {
-    height: 35px;
-    width: 35px;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    z-index: 2;
+/* project title animations */
+.project-title {
+    text-align: center;
+    /* margin-top: -20px; */
+    transition: 0.5s ease;
 }
 
-.card-github:hover {
-    opacity: 50%;
+.title-animate {
+    margin-top: 20px;
+}
+
+/* project description animations */
+.project-description {
+    text-align: center;
+    padding: 0 15px;
+    transition: 0.5s ease;
+    font-size: 16px;
+}
+
+.description-animate {
+    margin: 10px;
+}
+
+/* project divider animations */
+.project-divider {
+    border-bottom: 1px solid #333;
+    width: 0;
+    height: 0;
+    margin: 20px 50%;
+    transition: 1s ease;
+}
+
+.divider-animate {
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* project button animations*/
+.link-buttons {
+    position: relative;
+    bottom: -100px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+}
+
+.project-link {
+    border: 1px solid transparent;
+    position: relative;
+    color: #fdfdfa;
+    background-color: #333;
+    padding: 2px;
+    font-family: 'Roboto Mono', sans-serif;
+    transition: ease 0.2s;
+}
+
+.link-animate {
+    bottom: 0px;
+}
+
+.project-link:hover{
+    border: 1px solid #333;
+    color: #333;
+    background-color: transparent;
+    text-decoration: none;
 }
 
 /* resume section */
@@ -216,6 +286,7 @@ h2 {
     padding: 5px 10px 7px;
     color: #163485;
     font-family: 'Roboto Mono', sans-serif;
+    transition: ease 0.4s;
 }
 
 #resume-btn:hover{
@@ -317,6 +388,14 @@ form {
     color: #fdfdfa;
     text-align: center;
     font-size: 14px;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.animate__animated.animate__fadeInUpBig {
+    --animate-duration: 1.2s;
 }
 
 @media screen and (max-width: 950px) {

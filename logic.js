@@ -3,6 +3,85 @@ const observer = lozad();
 observer.observe();
 
 $(document).ready(function () {
+    // animate visible elements on page load
+    $('.myFadeIn').each(function () {
+        if (checkAnimatePos(this)) {
+            $(this).addClass('animate__fadeInUpBig');
+            $(this).removeClass('opacity-0');
+        }
+    })
+
+    // 0 indicates project image showing, 1 indicates description showing
+    const projectState = [false, false, false, false, false, false];
+
+    $(".project-card").on('click', function (event) {
+        let id = event.target.getAttribute("data-project");
+        let index = document.getElementById(id).getAttribute("data-index");
+
+        // check state of target
+        // project image showing before click
+        if (projectState[index] === false) {
+            $("#" + id).children(".project-info").addClass('project-animate');
+            $("#" + id).children(".project-info").children(".project-title").addClass('title-animate');
+            $("#" + id).children(".project-info").children(".project-description").addClass('description-animate');
+            $("#" + id).children(".project-info").children(".project-divider").addClass('divider-animate');
+            $("#" + id).children(".project-info").children(".project-divider").removeClass('d-none');
+            $("#" + id).children(".project-info").children(".link-buttons").addClass('link-animate');
+            $("#" + id).children(".project-img").addClass('img-animate');
+            if(id === "digital-class") {
+                $("#digital-class").addClass('digital-class-description-height');
+            }
+        }
+        // project description showing
+        else {
+            $("#" + id).children(".project-info").removeClass('project-animate');
+            $("#" + id).children(".project-info").children(".project-title").removeClass('title-animate');
+            $("#" + id).children(".project-info").children(".project-description").removeClass('description-animate');
+            $("#" + id).children(".project-info").children(".project-divider").removeClass('divider-animate');
+            $("#" + id).children(".project-info").children(".link-buttons").removeClass('link-animate');
+            $("#" + id).children(".project-img").removeClass('img-animate');
+            $("#" + id).children(".project-info").children(".project-divider").addClass('d-none');
+            if(id === "digital-class") {
+                $("#digital-class").removeClass('digital-class-description-height');
+            }
+        }
+        projectState[index] = !projectState[index];
+    });
+
+    $(".project-card").hover(function (event) {
+        // mouse over function
+        let id = event.target.getAttribute("data-project");
+        let index = document.getElementById(id).getAttribute("data-index");
+
+        $("#" + id).children(".project-info").addClass('project-animate');
+        $("#" + id).children(".project-info").children(".project-title").addClass('title-animate');
+        $("#" + id).children(".project-info").children(".project-description").addClass('description-animate');
+        $("#" + id).children(".project-info").children(".project-divider").addClass('divider-animate');
+        $("#" + id).children(".project-info").children(".project-divider").removeClass('d-none');
+        $("#" + id).children(".project-info").children(".link-buttons").addClass('link-animate');
+        $("#" + id).children(".project-img").addClass('img-animate');
+        if(id === "digital-class") {
+            $("#digital-class").addClass('digital-class-description-height');
+        }
+        projectState[index] === true;
+    }, function (event) {
+        // console.log(event.target);
+        // mouse out function
+        let id = event.target.getAttribute("data-project");
+        let index = document.getElementById(id).getAttribute("data-index");
+
+        $("#" + id).children(".project-info").removeClass('project-animate');
+        $("#" + id).children(".project-info").children(".project-title").removeClass('title-animate');
+        $("#" + id).children(".project-info").children(".project-description").removeClass('description-animate');
+        $("#" + id).children(".project-info").children(".project-divider").removeClass('divider-animate');
+        $("#" + id).children(".project-info").children(".link-buttons").removeClass('link-animate');
+        $("#" + id).children(".project-img").removeClass('img-animate');
+        $("#" + id).children(".project-info").children(".project-divider").addClass('d-none');
+        if(id === "digital-class") {
+            $("#digital-class").removeClass('digital-class-description-height');
+        }
+        projectState[index] === false;
+    });
 
     var height = $(window).height();
     /* reload the page if the window is resized. This is needed to reset the
@@ -14,6 +93,17 @@ $(document).ready(function () {
             return false;
         }
     });
+
+
+    function checkAnimatePos(element) {
+        //return true is element is above the bottom of the window and below the top
+        let windowBottom = $(window).scrollTop() + $(window).height();
+        let windowTop = $(window).scrollTop();
+        let elementBottom = $(element).offset().top + $(element).height();
+        let elementTop = $(element).offset().top;
+
+        return ((elementTop <= windowBottom) && (elementBottom >= windowTop));
+    }
 
     // define position of elements for scrolling
     var navPosition = $("#navbar").offset().top;
@@ -82,6 +172,15 @@ $(document).ready(function () {
             $("#resume-link").removeClass("current-page");
             $("#contact-link").removeClass("current-page");
         }
+
+        // fade elements in on scroll
+        $('.myFadeIn').each(function () {
+            if (checkAnimatePos(this)) {
+                $(this).addClass('animate__fadeInUpBig');
+                $(this).removeClass('opacity-0');
+            }
+        })
+        
     });
 
     // hover functions. Must be unique for each card so only the desired card gets shadow

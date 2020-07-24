@@ -26,6 +26,9 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
 
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/style.css" />
 
@@ -35,9 +38,11 @@
 <body>
     <header>
         <div id="cover-screen" class="d-flex justify-content-center align-items-center flex-column position-relative">
-            <h1>Hello, my name is Ryan Gautier.<br>Welcome to my website.</h1>
-            <a id="continue-btn" href="#about" class="pb-2 pl-2 pr-2 pt-1">Continue ></a>
-            <img class="cover-screen-bg position-absolute" src="https://res.cloudinary.com/dbhnjg0zu/image/upload/c_scale,q_auto:eco,w_800/v1594595278/portfolio-background_ycbtl9.jpg" alt="Cover Screen Painting Background"/>
+            <h1 class="animate__animated animate__fadeIn">Hello, my name is Ryan Gautier.<br>Welcome to my website.</h1>
+            <a id="continue-btn" href="#about" class="pb-2 pl-2 pr-2 pt-1 animate__animated animate__fadeIn">Continue ></a>
+            <img class="cover-screen-bg position-absolute"
+                src="https://res.cloudinary.com/dbhnjg0zu/image/upload/c_scale,q_auto:eco,w_800/v1594595278/portfolio-background_ycbtl9.jpg"
+                alt="Cover Screen Painting Background" />
         </div>
         <div id="btm-cover"></div>
         <nav id="navbar">
@@ -50,7 +55,7 @@
     </header>
 
     <article id="about">
-        <p class="pt-5 pb-5" id="about-text">I am a web developer based in Austin, TX.
+        <p class="pt-5 pb-5 animate__animated myFadeIn opacity-0" id="about-text">I am a web developer based in Austin, TX.
             <br>
             My passion is problem solving, which is why I love what I do.
             <br><br>
@@ -63,7 +68,7 @@
             I'd love for you to take a look at some of my projects below and see what I'm all about!
         </p>
         <div class="container-lg pt-5">
-            <div class="row d-flex justify-content-around">
+            <div class="row d-flex justify-content-around animate__animated myFadeIn opacity-0">
                 <div class="about-pic d-flex col-xs-4 flex-column ml-3 mr-3 text-center">
                     <img src="./assets/undraw_progressive_app_m9ms.svg" alt="Responsive Design" class="mb-4 mt-4">
                     Responsive Design
@@ -80,113 +85,165 @@
         </div>
     </article>
 
-    <article id="projects" class="container">
+    <article id="projects">
         <h2>Projects</h2>
         <div class="row">
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="digital-class">
-                    <img src="assets/digitalclass.png" class="card-img-top project-img" alt="Digital Class Logo">
-                    <div class="card-body">
-                        <a href="https://github.com/aroblesgalit/digital-class" target="_blank">
-                            <img src="assets/github-image.png" class="card-github" alt="Github Logo" />
-                        </a>
-                        <a href="https://digital-class-production.herokuapp.com/" target="_blank" class="deployed-link"
-                            rel="noopener noreferrer">
-                            <h5 class="card-title">DigitalClass</h5>
-                        </a>
-                        <p class="card-text">A responsive full-stack MERN app allowing teachers to easily create and
-                            assign quizzes
-                            to their students, and students to take the quizzes.</p>
-                    </div>
-                    <div class="card-body">
-                        <a href="https://youtu.be/nlwMN5RwwP8" class="card-link demo-link" target="_blank"
-                            rel="noreferrer noopener"><i class="fab fa-youtube"></i></a>
+            <div class="col-sm-12 col-md-6 d-flex justify-content-center animate__animated myFadeIn opacity-0">
+                <div class="project-card" id="digital-class" data-index="0" data-project="digital-class">
+                    <img src="assets/digitalclass.png" class="project-img" alt="Digital Class Logo"
+                        data-project="digital-class">
+                    <div class="project-info" data-project="digital-class">
+                        <h5 class="project-title" data-project="digital-class">DigitalClass</h5>
+                        <p class="project-description" data-project="digital-class">A responsive full-stack MERN app
+                            allowing teachers to create quizzes, and students to take the quizzes. Some of my contributions include 
+                        components for creating and taking a quiz. I also helped to integrate the front end with the back end.</p>
+                        <div class="project-divider" data-project="digital-class"></div>
+                        <div class="d-flex flex-row justify-content-around link-buttons" data-project="digital-class">
+                            <a href="https://digital-class-production.herokuapp.com/" target="_blank"
+                                class="project-link" rel="noopener noreferrer" data-project="digital-class">
+                                View Site
+                            </a>
+                            <a href="https://github.com/aroblesgalit/digital-class" target="_blank" class="project-link"
+                                rel="noopener noreferrer" data-project="digital-class">
+                                Github
+                            </a>
+                            <a href="https://youtu.be/nlwMN5RwwP8" class="project-link" target="_blank"
+                                rel="noreferrer noopener" data-project="digital-class">
+                                Video Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="tv-tracker">
-                    <img src="./assets/w4logo.png" class="card-img-top project-img" alt="Watch What Where and When">
-                    <a href="https://github.com/ryangautier1/Tv-Tracker" target="_blank"><img
-                            src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
-                    <div class="card-body">
-                        <a href="https://wfourbkf.herokuapp.com/" class="deployed-link" target="_blank">
-                            <h5 class="card-title">W4</h5>
-                        </a>
-                        <p class="card-text">W4 (Watch What Where When) is a responsive movie and tv streaming locator
+            <div class="col-sm-12 col-md-6 d-flex justify-content-center animate__animated myFadeIn opacity-0">
+                <div class="project-card" id="tv-tracker" data-index="1" data-project="tv-tracker">
+                    <img src="./assets/w4logo.png" class="project-img" alt="Watch What Where and When"
+                        data-project="tv-tracker">
+
+                    <div class="project-info" data-project="tv-tracker">
+                        <h5 class="project-title" data-project="tv-tracker">W4</h5>
+                        <p class="project-description" data-project="tv-tracker">W4 (Watch What Where When) is a
+                            responsive movie and tv streaming locator
                             and
                             watchlist storing service.</p>
+                        <div class="project-divider" data-project="tv-tracker"></div>
+                        <div class="d-flex flex-row justify-content-around link-buttons" data-project="tv-tracker">
+                            <a href="https://wfourbkf.herokuapp.com/" class="project-link" target="_blank"
+                                rel="noreferrer noopener" data-project="tv-tracker">
+                                View Site
+                            </a>
+                            <a href="https://github.com/Brian-Fairbanks/TV-Tracker" class="project-link" target="_blank"
+                                rel="noreferrer noopener" data-project="tv-tracker">
+                                Github
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="google-books">
-                    <img src="assets/googlebook.png" class="card-img-top project-img"
-                        alt="React Google Book Search Screenshot">
-                    <a href="https://github.com/ryangautier1/GoogleBookSearch" target="_blank"><img
-                            src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
-                    <div class="card-body">
-                        <a href="https://protected-badlands-39273.herokuapp.com/" class="deployed-link"
-                            target="_blank"></a>
-                        <h5 class="card-title">React Google Book Search</h5>
-                        </a>
-                        <p class="card-text">A full stack MERN app for searching and storing books utilizing the Google
+            <div class="col-sm-12 col-md-6 d-flex justify-content-center animate__animated myFadeIn opacity-0">
+                <div class="project-card" id="google-books" data-index="2" data-project="google-books">
+                    <img src="assets/googlebook.png" class="project-img" alt="React Google Book Search Screenshot"
+                        data-project="google-books">
+
+                    <div class="project-info" data-project="google-books">
+                        <h5 class="project-title" data-project="google-books">React Google Book Search</h5>
+                        <p class="project-description" data-project="google-books">A full stack MERN app for searching
+                            and
+                            storing books utilizing the
+                            Google
                             Books API.</p>
+                        <div class="project-divider" data-project="google-books"></div>
+                        <div class="d-flex flex-row justify-content-around link-buttons" data-project="google-books">
+                            <a href="https://protected-badlands-39273.herokuapp.com/" class="project-link"
+                                target="_blank" rel="noreferrer noopener" data-project="google-books">
+                                View Site
+                            </a>
+                            <a href="https://github.com/ryangautier1/GoogleBookSearch" target="_blank"
+                                class="project-link" rel="noreferrer noopener" data-project="google-books">
+                                Github
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="lunch-and-wag">
-                    <img src="assets/dog.png" class="card-img-top project-img" alt="Lunch and Wag Logo">
-                    <a href="https://github.com/ryangautier1/Lunch-and-Wag" target="_blank"><img
-                            src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
-                    <div class="card-body">
-                        <a href="https://ryangautier1.github.io/Lunch-and-Wag/" class="deployed-link" target="_blank">
-                            <h5 class="card-title">Lunch and Wag</h5>
-                        </a>
-                        <p class="card-text">A responsive application for finding nearby dog-friendly restaurants, and
+            <div class="col-sm-12 col-md-6 d-flex justify-content-center animate__animated opacity-0 myFadeIn">
+                <div class="project-card" id="lunch-and-wag" data-index="3" data-project="lunch-and-wag">
+                    <img src="assets/dog.png" class="project-img" alt="Lunch and Wag Logo" data-project="lunch-and-wag">
+
+                    <div class="project-info" data-project="lunch-and-wag">
+                        <h5 class="project-title" data-project="lunch-and-wag">Lunch and Wag</h5>
+                        <p class="project-description" data-project="lunch-and-wag">A responsive application for finding
+                            nearby
+                            dog-friendly restaurants, and
                             relevant
                             information about them.</p>
+                        <div class="project-divider" data-project="lunch-and-wag"></div>
+                        <div class="d-flex flex-row justify-content-around link-buttons" data-project="lunch-and-wag">
+                            <a href="https://ryangautier1.github.io/Lunch-and-Wag/" class="project-link" target="_blank"
+                                rel="noopener noreferrer" data-project="lunch-and-wag">
+                                View Site
+                            </a>
+                            <a href="https://github.com/ryangautier1/Lunch-and-Wag" target="_blank" class="project-link"
+                                rel="noopener noreferrer" data-project="lunch-and-wag">
+                                Github
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="readme">
+            <div class="col-sm-12 col-md-6 d-flex justify-content-center animate__animated myFadeIn opacity-0">
+                <div class="project-card" id="readme" data-index="4" data-project="readme">
                     <!-- lazy loading with lozad -->
                     <img data-src="https://github.com/ryangautier1/Readme-Generator/raw/master/ImplementationGif.gif"
-                        class="card-img-top readme-img lozad" alt="Readme-Generator">
-                    <a href="https://github.com/ryangautier1/Readme-Generator" target="_blank"><img
-                            src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
-                    <div class="card-body">
-                        <a href="https://github.com/ryangautier1/Readme-Generator" class="deployed-link"
-                            target="_blank">
-                            <h5 class="card-title">README Generator</h5>
-                        </a>
-                        <p class="card-text">CLI application for generating README's</p>
+                        class="project-img lozad" alt="Readme-Generator" data-project="readme">
+
+                    <div class="project-info" data-project="readme">
+                        <h5 class="project-title" data-project="readme">README Generator</h5>
+                        <p class="project-description" data-project="readme">CLI application for generating README's</p>
+                        <div class="project-divider" data-project="readme"></div>
+                        <div class="d-flex flex-row justify-content-around link-buttons" data-project="readme">
+                            <a href="https://github.com/ryangautier1/Readme-Generator" class="project-link"
+                                target="_blank" data-project="readme">
+                                Github
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
-                <div class="card" id="avoid-the-orcas">
-                    <img src="assets/find-orcas-image.png" class="card-img-top project-img" alt="Avoid The Orcas">
-                    <a href="https://github.com/ryangautier1/AvoidTheOrcas" target="_blank"><img
-                            src="assets/github-image.png" class="card-github" alt="Github Logo" /></a>
-                    <div class="card-body">
-                        <a href="https://ryangautier1.github.io/AvoidTheOrcas/" class="deployed-link" target="_blank">
-                            <h5 class="card-title">Avoid The Orcas</h5>
-                        </a>
-                        <p class="card-text">A recreation of classic Minesweeper using vanilla JavaScript.</p>
+            <div class="col-sm-12 col-md-6 d-flex justify-content-center animate__animated myFadeIn opacity-0">
+                <div class="project-card" id="avoid-the-orcas" data-index="5" data-project="avoid-the-orcas">
+                    <img src="assets/find-orcas-image.png" class="project-img" alt="Avoid The Orcas"
+                        data-project="avoid-the-orcas">
+
+                    <div class="project-info" data-project="avoid-the-orcas">
+                        <h5 class="project-title" data-project="avoid-the-orcas">Avoid The Orcas</h5>
+
+                        <p class="project-description" data-project="avoid-the-orcas">A recreation of classic
+                            Minesweeper using
+                            vanilla JavaScript.</p>
+                        <div class="project-divider" data-project="avoid-the-orcas"></div>
+                        <div class="d-flex flex-row justify-content-around link-buttons" data-project="avoid-the-orcas">
+                            <a href="https://github.com/ryangautier1/AvoidTheOrcas" target="_blank" class="project-link"
+                                rel="noopener noreferrer" data-project="avoid-the-orcas">
+                                Github
+                            </a>
+                            <a href="https://ryangautier1.github.io/AvoidTheOrcas/" class="project-link" target="_blank"
+                                rel="noopener noreferrer" data-project="avoid-the-orcas">
+                                Play Game
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </article>
 
-    <article id="resume">
+    <article id="resume" class="animate__animated myFadeIn opacity-0">
         <img src="assets/ryanpicturesquare.png" alt="Ryan Gautier" id="ryan-picture" />
         <a id="resume-btn" href="assets/GautierResume_2020.pdf" target="_blank">My Resume</a>
     </article>
