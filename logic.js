@@ -75,6 +75,18 @@ $(document).ready(function () {
         }
     });
 
+
+    function checkAnimatePos(element) {
+        //return true is element is above the bottom of the window and below the top
+        // console.log(element, '---------top', $(element).offset().top, '--------bottom', $(window).scrollTop());
+        let windowBottom = $(window).scrollTop() + $(window).height();
+        let windowTop = $(window).scrollTop();
+        let elementBottom = $(element).offset().top + $(element).height();
+        let elementTop = $(element).offset().top;
+
+        return ((elementTop <= windowBottom) && (elementBottom >= windowTop));
+    }
+
     // define position of elements for scrolling
     var navPosition = $("#navbar").offset().top;
     var projectPosition = $("#projects").offset().top - 20;
@@ -142,6 +154,16 @@ $(document).ready(function () {
             $("#resume-link").removeClass("current-page");
             $("#contact-link").removeClass("current-page");
         }
+
+        // fade elements in on scroll
+        $('.animate__animated').each(function () {
+            if (checkAnimatePos(this)) {
+                $(this).addClass('animate__fadeInUpBig');
+            }
+        })
+        
+        console.log('about',$('#about-text').offset().top + $('#about-text').height(), 'window', $(window).scrollTop() + $(window).height());
+
     });
 
     // hover functions. Must be unique for each card so only the desired card gets shadow
