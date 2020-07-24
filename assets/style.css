@@ -391,6 +391,14 @@ form {
     font-size: 14px;
 }
 
+.opacity-0 {
+    opacity: 0;
+}
+
+.animate__animated.animate__fadeInUpBig {
+    --animate-duration: 1.2s;
+}
+
 @media screen and (max-width: 950px) {
     .about-pic img {
         max-height: 80px;

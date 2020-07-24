@@ -78,7 +78,6 @@ $(document).ready(function () {
 
     function checkAnimatePos(element) {
         //return true is element is above the bottom of the window and below the top
-        // console.log(element, '---------top', $(element).offset().top, '--------bottom', $(window).scrollTop());
         let windowBottom = $(window).scrollTop() + $(window).height();
         let windowTop = $(window).scrollTop();
         let elementBottom = $(element).offset().top + $(element).height();
@@ -156,14 +155,13 @@ $(document).ready(function () {
         }
 
         // fade elements in on scroll
-        $('.animate__animated').each(function () {
+        $('.myFadeIn').each(function () {
             if (checkAnimatePos(this)) {
                 $(this).addClass('animate__fadeInUpBig');
+                $(this).removeClass('opacity-0');
             }
         })
         
-        console.log('about',$('#about-text').offset().top + $('#about-text').height(), 'window', $(window).scrollTop() + $(window).height());
-
     });
 
     // hover functions. Must be unique for each card so only the desired card gets shadow
