@@ -142,9 +142,9 @@ a:hover {
     border-bottom: 1px solid #5e5d5d;
 }
 
-#projects {
+/* #projects {
     margin: 0 20px;
-}
+} */
 
 /* for projects heading and contact heading */
 h2 {
@@ -156,16 +156,23 @@ h2 {
 
 .project-card {
     max-width: 325px;
-    max-height: 300px;
+    max-height: 340px;
     min-height: 200px;
     margin-bottom: 25px;
     position: relative;
 }
-/* 
+
 #digital-class {
-    transition: ease 0.4s;
+    /* transition: ease 0.4s; */
+    min-height: 310px;
 }
 
+#readme .project-img {
+    height: 90%;
+    width: 90%;
+    overflow: hidden;
+}
+/*
 .digital-class-description-height {
     min-height: 360px;
 } */
