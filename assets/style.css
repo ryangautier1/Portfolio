@@ -457,4 +457,7 @@ form {
         font-size: 18px;
         color: #163485;
     }
+    #digital-class {
+        height: 320px;
+    }
 }
