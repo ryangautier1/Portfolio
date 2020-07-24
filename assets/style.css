@@ -161,14 +161,14 @@ h2 {
     margin-bottom: 25px;
     position: relative;
 }
-
+/* 
 #digital-class {
     transition: ease 0.4s;
 }
 
 .digital-class-description-height {
     min-height: 360px;
-}
+} */
 
 .project-card:hover, .card-text {
     text-decoration: none;
