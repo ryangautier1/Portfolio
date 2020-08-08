@@ -176,7 +176,7 @@ $(document).ready(function () {
         // fade elements in on scroll
         $('.myFadeIn').each(function () {
             if (checkAnimatePos(this)) {
-                $(this).addClass('animate__fadeInUpBig');
+                $(this).addClass('animate__fadeInUp');
                 $(this).removeClass('opacity-0');
             }
         })
