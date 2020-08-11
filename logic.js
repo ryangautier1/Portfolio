@@ -28,9 +28,6 @@ $(document).ready(function () {
             $("#" + id).children(".project-info").children(".project-divider").removeClass('d-none');
             $("#" + id).children(".project-info").children(".link-buttons").addClass('link-animate');
             $("#" + id).children(".project-img").addClass('img-animate');
-            // if(id === "digital-class") {
-            //     $("#digital-class").addClass('digital-class-description-height');
-            // }
         }
         // project description showing
         else {
@@ -41,9 +38,6 @@ $(document).ready(function () {
             $("#" + id).children(".project-info").children(".link-buttons").removeClass('link-animate');
             $("#" + id).children(".project-img").removeClass('img-animate');
             $("#" + id).children(".project-info").children(".project-divider").addClass('d-none');
-            // if(id === "digital-class") {
-            //     $("#digital-class").removeClass('digital-class-description-height');
-            // }
         }
         projectState[index] = !projectState[index];
     });
@@ -202,10 +196,10 @@ $(document).ready(function () {
         $("#google-books").removeClass("shadow");
     });
 
-    $("#readme").hover(function () {
-        $("#readme").addClass("shadow");
+    $("#blogsite").hover(function () {
+        $("#blogsite").addClass("shadow");
     }, function () {
-        $("#readme").removeClass("shadow");
+        $("#blogsite").removeClass("shadow");
     });
 
     $("#avoid-the-orcas").hover(function () {
