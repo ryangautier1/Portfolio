@@ -29,7 +29,7 @@ window.addEventListener('mousemove', function () {
   // only if it is not on a small screen
   if (window.innerWidth >= 650) {
     mouse.x = event.x;
-    mouse.y = event.y;
+    mouse.y = event.y + window.pageYOffset;
   }
 });
 
@@ -185,7 +185,7 @@ function init() {
 
 function animate() {
   requestAnimationFrame(animate);
-  c.clearRect(0, 0, innerWidth, innerHeight);
+  c.clearRect(0, 0, innerWidth, innerHeight*1.75);
 
   // rear mountains
   new Mountain(-2 * innerWidth / 9, innerHeight, 1 * innerWidth / 9, innerHeight * 0.55, 4 * innerWidth / 9, innerHeight, '#293944');
