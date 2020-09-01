@@ -33,22 +33,6 @@ window.addEventListener('mousemove', function () {
   }
 });
 
-// for small screens
-window.addEventListener('pointerdown', function() {
-  if (window.innerWidth < 650) {
-    mouse.x = event.x;
-    mouse.y = event.y;
-  }
-});
-
-// unset mouse after click is done
-window.addEventListener('pointerup', function() {
-  if (window.innerWidth < 650) {
-    mouse.x = undefined;
-    mouse.y = undefined;
-  }
-});
-
 // get window height on page load
 let initialHeight = window.innerHeight;
 let initialWidth = window.innerWidth;
