@@ -27,7 +27,7 @@ else {
 // event listeners
 window.addEventListener('mousemove', function () {
   // only if it is not on a small screen
-  if (window.innerWidth >= 650) {
+  if (window.innerWidth >= 800) {
     mouse.x = event.x;
     mouse.y = event.y + window.pageYOffset;
   }
@@ -37,10 +37,9 @@ window.addEventListener('mousemove', function () {
 let initialHeight = window.innerHeight;
 let initialWidth = window.innerWidth;
 window.addEventListener('resize', function () {
-  // compare height on page load to new height after resizing. will be greater
-  // than 100 if not from mobile hiding top bar.
-  // also check width
-  if (Math.abs(window.innerHeight - initialHeight) > 100 || Math.abs(window.innerWidth - initialWidth) > 100) {
+  // only do resize function if the width changed
+  
+  if (Math.abs(window.innerWidth - initialWidth) > 100) {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     init();
