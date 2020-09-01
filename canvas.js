@@ -153,15 +153,23 @@ function init() {
 function animate() {
   requestAnimationFrame(animate);
   c.clearRect(0, 0, innerWidth, innerHeight);
+
+  // rear mountains
+  new Mountain(-2*innerWidth/9, innerHeight, 1*innerWidth/9, innerHeight*0.55, 4*innerWidth/9, innerHeight, '#293944');
+  new Mountain(0, innerHeight, 3*innerWidth/9, innerHeight*0.55, 6*innerWidth/9, innerHeight, '#293944');
+  new Mountain(3*innerWidth/9, innerHeight, 6*innerWidth/9, innerHeight*0.55, 9*innerWidth/9, innerHeight, '#293944');
+  new Mountain(5*innerWidth/9, innerHeight, 8*innerWidth/9, innerHeight*0.55, 11*innerWidth/9, innerHeight, '#293944');
+  // big middle mountain
   new Mountain(0, innerHeight, innerWidth/2, innerHeight*0.5, innerWidth, innerHeight, '#314755');
+  // middle row of two mountains
   new Mountain(-100, innerHeight, innerWidth/4, innerHeight*0.65, innerWidth/2 + 100, innerHeight, '#364d5c');
   new Mountain(innerWidth/2 - 100, innerHeight, 3*innerWidth/4, innerHeight*0.65, innerWidth + 100, innerHeight, '#364d5c');
+  // front dark mountains
   new Mountain(-50, innerHeight, innerWidth/6, innerHeight*0.8, innerWidth/3 + 50, innerHeight, '#2b3d49');
   new Mountain(innerWidth/3 -50, innerHeight, innerWidth/2, innerHeight*0.8, 2*innerWidth/3 + 50, innerHeight, '#2b3d49');
   new Mountain(2*innerWidth/3 - 50, innerHeight, 5*innerWidth/6, innerHeight*0.8, innerWidth + 50, innerHeight, '#2b3d49');
 
-
-  new Mountain(2*innerWidth/3 - 50, innerHeight, 5*innerWidth/6, innerHeight*0.8, innerWidth + 50, innerHeight, '#2b3d49');
+  
 
   for (let i = 0; i < raindropArray.length; i++) {
     raindropArray[i].update();
