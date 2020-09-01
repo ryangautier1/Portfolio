@@ -83,7 +83,8 @@ function Raindrop(x, dx, dy) {
   }
 
   this.update = function () {
-    if (this.y > innerHeight + this.h / 2) {
+    // offset of 80 for mobile
+    if (this.y > innerHeight + this.h / 2 + 80) {
       raindropArray.splice(raindropArray.indexOf(this), 1);
     }
     // this.x += this.dx;
@@ -148,7 +149,8 @@ function BouncingRaindrop(x, y, dx, dy) {
   }
 
   this.update = function () {
-    if (this.y > innerHeight) {
+    // offset of 80 for mobile
+    if (this.y > innerHeight + 80) {
       bouncingRaindropArray.splice(bouncingRaindropArray.indexOf(this), 1);
     }
 
