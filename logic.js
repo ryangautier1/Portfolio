@@ -2,6 +2,8 @@
 const observer = lozad();
 observer.observe();
 
+
+
 $(document).ready(function () {
     // animate visible elements on page load
     $('.myFadeIn').each(function () {
