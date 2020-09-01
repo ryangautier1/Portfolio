@@ -2,8 +2,6 @@
 const observer = lozad();
 observer.observe();
 
-
-
 $(document).ready(function () {
     // animate visible elements on page load
     $('.myFadeIn').each(function () {
@@ -12,6 +10,11 @@ $(document).ready(function () {
             $(this).removeClass('opacity-0');
         }
     })
+
+    var navPosition;
+    var projectPosition;
+    var resumePosition;
+    var contactPosition;
 
     // 0 indicates project image showing, 1 indicates description showing
     const projectState = [false, false, false, false, false, false];
@@ -85,8 +88,10 @@ $(document).ready(function () {
     $(window).resize(function () {
         // check if the window resized more than it does when mobile browsers hide the navbar
         if (Math.abs($(window).height() - height) > 55) {
-            location.reload();
-            return false;
+            navPosition = $("#navbar").offset().top;
+            projectPosition = $("#projects").offset().top - 20;
+            resumePosition = $("#resume").offset().top - 20;
+            contactPosition = $("#contact-break").offset().top - 20;
         }
     });
 
@@ -102,10 +107,10 @@ $(document).ready(function () {
     }
 
     // define position of elements for scrolling
-    var navPosition = $("#navbar").offset().top;
-    var projectPosition = $("#projects").offset().top - 20;
-    var resumePosition = $("#resume").offset().top - 20;
-    var contactPosition = $("#contact-break").offset().top - 20;
+    navPosition = $("#navbar").offset().top;
+    projectPosition = $("#projects").offset().top - 20;
+    resumePosition = $("#resume").offset().top - 20;
+    contactPosition = $("#contact-break").offset().top - 20;
 
     $(window).scroll(function () {
         // if the window is between the cover section and the projects section

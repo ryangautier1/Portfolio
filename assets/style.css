@@ -15,12 +15,9 @@ a:hover {
 
 /* cover page */
 #cover-screen {
-    /* background-image: url("./portfolio-background.jpg"); */
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    /* background-attachment: fixed; */
-    /* background-size: cover; */
   }
 
 .cover-screen-bg {
