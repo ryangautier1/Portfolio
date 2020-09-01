@@ -134,11 +134,13 @@ function BouncingRaindrop(x, y, dx, dy) {
 }
 
 let raindropArray;
+let interval;
 
 function init() {
   raindropArray = [];
   bouncingRaindropArray = [];
-  let interval = setInterval(function () {
+  clearInterval(interval);
+  interval = setInterval(function () {
     let x1 = Math.random() * (innerWidth);
     let x2 = Math.random() * (innerWidth);
 
