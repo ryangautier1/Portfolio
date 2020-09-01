@@ -26,14 +26,41 @@ else {
 
 // event listeners
 window.addEventListener('mousemove', function () {
-  mouse.x = event.x;
-  mouse.y = event.y;
-})
+  // only if it is not on a small screen
+  if (window.innerWidth >= 650) {
+    mouse.x = event.x;
+    mouse.y = event.y;
+  }
+});
 
+// for small screens
+window.addEventListener('pointerdown', function() {
+  if (window.innerWidth < 650) {
+    mouse.x = event.x;
+    mouse.y = event.y;
+  }
+});
+
+// unset mouse after click is done
+window.addEventListener('pointerup', function() {
+  if (window.innerWidth < 650) {
+    mouse.x = undefined;
+    mouse.y = undefined;
+  }
+});
+
+// get window height on page load
+let initialHeight = window.innerHeight;
+let initialWidth = window.innerWidth;
 window.addEventListener('resize', function () {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  init();
+  // compare height on page load to new height after resizing. will be greater
+  // than 55 if not from mobile hiding top bar.
+  // also check width
+  if (Math.abs(window.innerHeight - initialHeight) > 55 || Math.abs(window.innerWidth - initialWidth) > 55) {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init();
+  }
 })
 
 
@@ -63,6 +90,7 @@ function Raindrop(x, dx, dy) {
     this.y += this.dy;
 
     // interactivity
+
     // if the raindrop comes within 50px of mouse
     if (Math.sqrt(Math.pow(mouse.x - this.x, 2) + Math.pow(mouse.y - this.y, 2)) < 50) {
       // if the raidrop is on the right of the mouse and toward the edge of the mouse-circle
@@ -83,6 +111,7 @@ function Raindrop(x, dx, dy) {
       }
       raindropArray.splice(raindropArray.indexOf(this), 1);
     }
+
 
     this.draw();
   }
@@ -157,21 +186,21 @@ function animate() {
   c.clearRect(0, 0, innerWidth, innerHeight);
 
   // rear mountains
-  new Mountain(-2*innerWidth/9, innerHeight, 1*innerWidth/9, innerHeight*0.55, 4*innerWidth/9, innerHeight, '#293944');
-  new Mountain(0, innerHeight, 3*innerWidth/9, innerHeight*0.55, 6*innerWidth/9, innerHeight, '#293944');
-  new Mountain(3*innerWidth/9, innerHeight, 6*innerWidth/9, innerHeight*0.55, 9*innerWidth/9, innerHeight, '#293944');
-  new Mountain(5*innerWidth/9, innerHeight, 8*innerWidth/9, innerHeight*0.55, 11*innerWidth/9, innerHeight, '#293944');
+  new Mountain(-2 * innerWidth / 9, innerHeight, 1 * innerWidth / 9, innerHeight * 0.55, 4 * innerWidth / 9, innerHeight, '#293944');
+  new Mountain(0, innerHeight, 3 * innerWidth / 9, innerHeight * 0.55, 6 * innerWidth / 9, innerHeight, '#293944');
+  new Mountain(3 * innerWidth / 9, innerHeight, 6 * innerWidth / 9, innerHeight * 0.55, 9 * innerWidth / 9, innerHeight, '#293944');
+  new Mountain(5 * innerWidth / 9, innerHeight, 8 * innerWidth / 9, innerHeight * 0.55, 11 * innerWidth / 9, innerHeight, '#293944');
   // big middle mountain
-  new Mountain(0, innerHeight, innerWidth/2, innerHeight*0.5, innerWidth, innerHeight, '#314755');
+  new Mountain(0, innerHeight, innerWidth / 2, innerHeight * 0.5, innerWidth, innerHeight, '#314755');
   // middle row of two mountains
-  new Mountain(-100, innerHeight, innerWidth/4, innerHeight*0.65, innerWidth/2 + 100, innerHeight, '#364d5c');
-  new Mountain(innerWidth/2 - 100, innerHeight, 3*innerWidth/4, innerHeight*0.65, innerWidth + 100, innerHeight, '#364d5c');
+  new Mountain(-100, innerHeight, innerWidth / 4, innerHeight * 0.65, innerWidth / 2 + 100, innerHeight, '#364d5c');
+  new Mountain(innerWidth / 2 - 100, innerHeight, 3 * innerWidth / 4, innerHeight * 0.65, innerWidth + 100, innerHeight, '#364d5c');
   // front dark mountains
-  new Mountain(-50, innerHeight, innerWidth/6, innerHeight*0.8, innerWidth/3 + 50, innerHeight, '#2b3d49');
-  new Mountain(innerWidth/3 -50, innerHeight, innerWidth/2, innerHeight*0.8, 2*innerWidth/3 + 50, innerHeight, '#2b3d49');
-  new Mountain(2*innerWidth/3 - 50, innerHeight, 5*innerWidth/6, innerHeight*0.8, innerWidth + 50, innerHeight, '#2b3d49');
+  new Mountain(-50, innerHeight, innerWidth / 6, innerHeight * 0.8, innerWidth / 3 + 50, innerHeight, '#2b3d49');
+  new Mountain(innerWidth / 3 - 50, innerHeight, innerWidth / 2, innerHeight * 0.8, 2 * innerWidth / 3 + 50, innerHeight, '#2b3d49');
+  new Mountain(2 * innerWidth / 3 - 50, innerHeight, 5 * innerWidth / 6, innerHeight * 0.8, innerWidth + 50, innerHeight, '#2b3d49');
 
-  
+
 
   for (let i = 0; i < raindropArray.length; i++) {
     raindropArray[i].update();
