@@ -54,9 +54,9 @@ let initialHeight = window.innerHeight;
 let initialWidth = window.innerWidth;
 window.addEventListener('resize', function () {
   // compare height on page load to new height after resizing. will be greater
-  // than 55 if not from mobile hiding top bar.
+  // than 100 if not from mobile hiding top bar.
   // also check width
-  if (Math.abs(window.innerHeight - initialHeight) > 55 || Math.abs(window.innerWidth - initialWidth) > 55) {
+  if (Math.abs(window.innerHeight - initialHeight) > 100 || Math.abs(window.innerWidth - initialWidth) > 100) {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     init();
