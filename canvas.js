@@ -6,15 +6,25 @@ canvas.height = window.innerHeight;
 // context
 let c = canvas.getContext("2d");
 
-
+// mouse
 let mouse = {
   x: undefined,
   y: undefined
 }
 
+// colors
 const RAINCOLOR = '#ddd';
 
+// rate of rainfaill
+let rainRate;
+if (window.innerWidth > 800) {
+  rainRate = 0.5;
+}
+else {
+  rainRate = 5;
+}
 
+// event listeners
 window.addEventListener('mousemove', function () {
   mouse.x = event.x;
   mouse.y = event.y;
@@ -26,10 +36,13 @@ window.addEventListener('resize', function () {
   init();
 })
 
+
+
+
 function Raindrop(x, dx, dy) {
   this.x = x;
   this.y = 0;
-  this.h = 50;
+  this.h = 25;
   this.dx = dx;
   this.dy = dy;
   this.color = RAINCOLOR;
@@ -71,9 +84,20 @@ function Raindrop(x, dx, dy) {
       raindropArray.splice(raindropArray.indexOf(this), 1);
     }
 
-
     this.draw();
   }
+}
+
+function Mountain(startX, startY, peakX, peakY, endX, endY, color) {
+  c.strokeStyle = color; // line color
+  c.beginPath();
+  c.moveTo(startX, startY);
+  c.lineTo(peakX, peakY);
+  c.lineTo(endX, endY);
+  c.closePath();
+  c.fillStyle = color;
+  c.fill();
+  c.stroke();
 }
 
 
@@ -105,8 +129,6 @@ function BouncingRaindrop(x, y, dx, dy) {
     this.x += this.dx;
     this.y += this.dy;
 
-
-
     this.draw();
   }
 }
@@ -125,16 +147,26 @@ function init() {
 
     raindropArray.push(new Raindrop(x1, dx, dy));
     raindropArray.push(new Raindrop(x2, dx, dy));
-  }, 0.5);
+  }, rainRate);
 }
 
 function animate() {
   requestAnimationFrame(animate);
   c.clearRect(0, 0, innerWidth, innerHeight);
-  for (let i=0; i < raindropArray.length; i++) {
+  new Mountain(0, innerHeight, innerWidth/2, innerHeight*0.5, innerWidth, innerHeight, '#314755');
+  new Mountain(-100, innerHeight, innerWidth/4, innerHeight*0.65, innerWidth/2 + 100, innerHeight, '#364d5c');
+  new Mountain(innerWidth/2 - 100, innerHeight, 3*innerWidth/4, innerHeight*0.65, innerWidth + 100, innerHeight, '#364d5c');
+  new Mountain(-50, innerHeight, innerWidth/6, innerHeight*0.8, innerWidth/3 + 50, innerHeight, '#2b3d49');
+  new Mountain(innerWidth/3 -50, innerHeight, innerWidth/2, innerHeight*0.8, 2*innerWidth/3 + 50, innerHeight, '#2b3d49');
+  new Mountain(2*innerWidth/3 - 50, innerHeight, 5*innerWidth/6, innerHeight*0.8, innerWidth + 50, innerHeight, '#2b3d49');
+
+
+  new Mountain(2*innerWidth/3 - 50, innerHeight, 5*innerWidth/6, innerHeight*0.8, innerWidth + 50, innerHeight, '#2b3d49');
+
+  for (let i = 0; i < raindropArray.length; i++) {
     raindropArray[i].update();
   }
-  for (let i=0; i < bouncingRaindropArray.length; i++) {
+  for (let i = 0; i < bouncingRaindropArray.length; i++) {
     bouncingRaindropArray[i].update();
   }
 }
