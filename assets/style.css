@@ -410,16 +410,6 @@ form {
     color: #a8a8a6;
 }
 
-.photo-attribute {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fdfdfa;
-    text-align: center;
-    font-size: 14px;
-}
-
 .opacity-0 {
     opacity: 0;
 }
