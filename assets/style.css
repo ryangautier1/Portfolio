@@ -309,7 +309,7 @@ h2 {
     flex-direction: column;
 }
 
-#resume-btn{
+.resume-btn{
     margin: 35px 0 75px 0;
     font-size: 24px;
     border: 2px solid #163485;
@@ -319,7 +319,7 @@ h2 {
     transition: ease 0.4s;
 }
 
-#resume-btn:hover{
+.resume-btn:hover{
     border: 2px solid transparent;
     color: #fdfdfa;
     background-color: #163485;
@@ -438,8 +438,9 @@ form {
         bottom: 40px;
         right: 30px;
     }
-    #resume-btn{
+    .resume-btn{
         margin-bottom: 0;
+        font-size: 17px;
     }
 }
 
